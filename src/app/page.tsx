@@ -1,23 +1,13 @@
 "use client";
 
-import { useAppSelector } from "@/redux/store";
-import LoginPage from "./login";
-import { useState } from "react";
 import PageLayout from "@/components/PageLayout";
 import Image from "next/image";
 import Link from "next/link";
 import { SiLinkedin } from "react-icons/si";
 export default function Home() {
-  const [isDarkMode, setDarkMode] = useState(false);
 
-  const toggleDarkMode = (checked: boolean) => {
-    setDarkMode(checked);
-  };
-
-  const username = useAppSelector((state) => state.authReducer.value.username);
   return (
     <>
-      {/* <LoginPage/> */}
       <PageLayout title="Dashboard">
         <div className="p-5 md:p-10 grid grid-cols-1 md:grid-cols-3 gap-4 bg-gradient-to-r from-gray-500 to-red-500 rounded-md">
           <div className="col-span-2  flex items-center ">
