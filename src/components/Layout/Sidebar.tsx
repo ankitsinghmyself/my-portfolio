@@ -17,8 +17,8 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
 
   const links = [
     { label: "Home", href: "/", icon: MdHome },
-    { label: "GitHub", href: "/", icon: VscGithub },
-    { label: "Stack overflow", href: "/", icon: FaStackOverflow }
+    { label: "GitHub", href: "https://github.com/ankitsinghmyself", icon: VscGithub },
+    { label: "Stack overflow", href: "https://stackoverflow.com/users/11166949/ankit-singh", icon: FaStackOverflow }
   ];
 
   return (
@@ -34,7 +34,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
       <ul>
         {links.map((link, index) => (
           <li key={index} className="flex mb-5 text-gray-300 items-center">
-            <Link href={link.href} className="flex">
+            <Link href={link.href} target="_blank" className="flex">
               {link.icon && <link.icon className="inline mr-2 text-3xl" />}
               <p className="mt-1 ml-2">{link.label}</p>
             </Link>
