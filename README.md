@@ -10,4 +10,4 @@
 
 # 🌐 Socials:
 - [LinkedIn](https://linkedin.com/in/ankitsinghmyself)
-- [Stack Overflow](https://stackoverflow.com/users/11166949/ankit-singh))
+- [Stack Overflow](https://stackoverflow.com/users/11166949/ankit-singh)
