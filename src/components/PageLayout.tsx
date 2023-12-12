@@ -48,6 +48,7 @@ const PageLayout: React.FC<PageLayoutProps> = ({
 
       {/* Main Content */}
       <div className={`bg-dark text-gray-300 flex-1 p-4 ml-0 md:ml-64 `}>
+        
         {/*<div className="mb-4 lg:flex lg:justify-between lg:items-center">
                 <div className="lg:w-2/3">
                     <h2 className="text-xl font-bold">{title}</h2>

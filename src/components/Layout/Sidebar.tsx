@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { MdHome } from "react-icons/md";
 import { VscGithub } from "react-icons/vsc";
 import { FaStackOverflow } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 interface SidebarProps {
   isOpen: boolean;
@@ -17,8 +18,16 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
 
   const links = [
     { label: "Home", href: "/", icon: MdHome },
-    { label: "GitHub", href: "https://github.com/ankitsinghmyself", icon: VscGithub },
-    { label: "Stack overflow", href: "https://stackoverflow.com/users/11166949/ankit-singh", icon: FaStackOverflow }
+    {
+      label: "GitHub",
+      href: "https://github.com/ankitsinghmyself",
+      icon: VscGithub,
+    },
+    {
+      label: "Stack overflow",
+      href: "https://stackoverflow.com/users/11166949/ankit-singh",
+      icon: FaStackOverflow,
+    },
   ];
 
   return (
@@ -33,12 +42,17 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
       <h1 className="text-2xl font-bold mb-4">Ankit Singh</h1>
       <ul>
         {links.map((link, index) => (
-          <li key={index} className="flex mb-5 text-gray-300 items-center">
+          <motion.button
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            key={index}
+            className="flex mb-5 text-gray-300 items-center"
+          >
             <Link href={link.href} target="_blank" className="flex">
               {link.icon && <link.icon className="inline mr-2 text-3xl" />}
               <p className="mt-1 ml-2">{link.label}</p>
             </Link>
-          </li>
+          </motion.button>
         ))}
       </ul>
     </div>
