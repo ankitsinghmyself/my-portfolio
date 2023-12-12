@@ -19,7 +19,7 @@ export default function Home() {
       title: "Weather App",
       description: "A weather application built with React and OpenWeatherMap API",
       image: "/ankit.jpg",
-      url: "/",
+      url: "https://o-weather-app.vercel.app/",
     },
     {
       title: "Social App",
