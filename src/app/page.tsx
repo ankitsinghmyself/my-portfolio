@@ -16,8 +16,8 @@ export default function Home() {
       url: "/",
     },
     {
-      title: "Portfolio Website",
-      description: "A personal portfolio website to showcase my work",
+      title: "Weather App",
+      description: "A weather application built with React and OpenWeatherMap API",
       image: "/ankit.jpg",
       url: "/",
     },
@@ -34,6 +34,7 @@ export default function Home() {
       image: "/ankit.jpg",
       url: "/",
     },
+    
   ];
   return (
     <>
