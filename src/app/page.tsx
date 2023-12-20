@@ -16,8 +16,8 @@ export default function Home() {
       url: "/",
     },
     {
-      title: "Weather App",
-      description: "A weather application built with React and OpenWeatherMap API",
+      title: "Top Weather App",
+      description: "A weather application built with ReactJS and OpenWeatherMap API",
       image: "/weather.png",
       url: "https://react-weather-app-made-by-ankit.vercel.app/",
     },
@@ -89,11 +89,11 @@ export default function Home() {
           {project.map((item, index) => (
             <motion.div
               key={index}
-              whileHover={{ scale: 1.1 }}
+              whileHover={{ scale: 1 }}
               whileTap={{ scale: 0.9 }}
               className="max-w-sm bg-gray-800 border border-gray-200 rounded-lg shadow  dark:border-gray-700"
             >
-              <a href={item.url}>
+              <a href={item.url} target="_blank">
                 <img className="rounded-t-lg" src={item.image} alt={item.title} />
               </a>
               <div className="p-5">
