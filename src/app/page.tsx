@@ -11,9 +11,9 @@ export default function Home() {
     {
       title: "Dashboard App",
       description:
-        "A dashboard application built with Next.js and Tailwind CSS",
-      image: "/ankit.jpg",
-      url: "/",
+        "A dashboard application built with React and Material UI",
+      image: "/admin_dashboard.jpg",
+      url: "https://admin-dashboard-react-eta.vercel.app/",
     },
     {
       title: "Top Weather App",
@@ -22,16 +22,18 @@ export default function Home() {
       url: "https://react-weather-app-made-by-ankit.vercel.app/",
     },
     {
-      title: "Social App",
+      // title: "Social App",
+      title: "Coming Soon...",
       description: "A social media app built with React, Redux and Firebase",
-      image: "/ankit.jpg",
+      image: "/admin_dashboard.jpg",
       url: "/",
     },
     {
-      title: "Ecommerce Website",
+      // title: "Ecommerce Website",
+      title: "Coming Soon...",
       description:
         "An ecommerce website to sell products built with Next.js, Stripe and MongoDB",
-      image: "/ankit.jpg",
+      image: "/admin_dashboard.jpg",
       url: "/",
     },
     
@@ -87,14 +89,12 @@ export default function Home() {
 
         <div className="p-5  md:p-10 grid grid-cols-1 md:grid-cols-4 gap-4  ">
           {project.map((item, index) => (
-            <motion.div
+            <div
               key={index}
-              whileHover={{ scale: 1 }}
-              whileTap={{ scale: 0.9 }}
               className="max-w-sm bg-gray-800 border border-gray-200 rounded-lg shadow  dark:border-gray-700"
             >
               <a href={item.url} target="_blank">
-                <img className="rounded-t-lg" src={item.image} alt={item.title} />
+                <img className="rounded-t-lg" src={item.image} alt={item.title} style={{ width: '400px', height: '200px' }}/>
               </a>
               <div className="p-5">
                 <a href={item.url}>
@@ -106,7 +106,7 @@ export default function Home() {
                   {item.description}
                 </p>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
 
