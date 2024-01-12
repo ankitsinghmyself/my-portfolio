@@ -1,7 +1,7 @@
 "use client";
 
 import PageLayout from "@/components/PageLayout";
-import { motion, useAnimation } from "framer-motion";
+import { color, motion, useAnimation } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect } from "react";
@@ -10,14 +10,14 @@ export default function Home() {
   const project = [
     {
       title: "Dashboard App",
-      description:
-        "A dashboard application built with React and Material UI",
+      description: "A dashboard application built with React and Material UI",
       image: "/admin_dashboard.jpg",
       url: "https://admin-dashboard-react-eta.vercel.app/",
     },
     {
       title: "Top Weather App",
-      description: "A weather application built with ReactJS and OpenWeatherMap API",
+      description:
+        "A weather application built with ReactJS and OpenWeatherMap API",
       image: "/weather.png",
       url: "https://react-weather-app-made-by-ankit.vercel.app/",
     },
@@ -36,7 +36,6 @@ export default function Home() {
       image: "/admin_dashboard.jpg",
       url: "/",
     },
-    
   ];
   return (
     <>
@@ -52,7 +51,7 @@ export default function Home() {
                 src="/ankit.jpg"
                 alt="Profile Pic"
                 width={100}
-                height={100}
+                height={50}
                 className=" rounded-full border-white border-4 border-solid"
               />
             </motion.div>
@@ -94,7 +93,19 @@ export default function Home() {
               className="max-w-sm bg-gray-800 border border-gray-200 rounded-lg shadow  dark:border-gray-700"
             >
               <a href={item.url} target="_blank">
-                <img className="rounded-t-lg" src={item.image} alt={item.title} style={{ width: '400px', height: '200px' }}/>
+                <img
+                  className="rounded-t-lg"
+                  src={item.image}
+                  alt={item.title}
+                  height={200}
+                  width={500}
+                  style={{
+                    width: "100%",
+                    aspectRatio: 1 / 1,
+                    height: "170px",
+                    objectFit: "cover",
+                  }}
+                />
               </a>
               <div className="p-5">
                 <a href={item.url}>
