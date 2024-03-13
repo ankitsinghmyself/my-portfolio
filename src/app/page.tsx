@@ -76,7 +76,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="pb-5 md:p-5 -mb-10 grid grid-cols-1 gap-4  ">
+        <div className="pb-5 md:p-10 -mb-10 grid grid-cols-1 gap-4  ">
           <p className="text-white text-2xl font-bold">Projects</p>
         </div>
 
@@ -114,7 +114,7 @@ export default function Home() {
         </div>
 
         {/* what i know */}
-        <div className="p-5 md:p-10 -mb-10 grid grid-cols-1 gap-4  ">
+        <div className="p-5 md:p-10 -mb-10 -mt-10 grid grid-cols-1 gap-4  ">
           <p className="text-white text-2xl font-bold">What I know</p>
         </div>
         <div className="p-5  md:p-10 grid grid-cols-1 md:grid-cols-5 gap-4  ">
