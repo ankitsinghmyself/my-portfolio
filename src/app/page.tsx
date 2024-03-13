@@ -9,31 +9,33 @@ import { SiLinkedin } from "react-icons/si";
 export default function Home() {
   const project = [
     {
+      // title: "UI Templates",
+      title: "UI Templates",
+      description:
+        "A website template using React, Next.js, TypeScript, Chakra UI, and CSS, providing pre-designed layouts for effortless deployment.",
+      image: "/uiTemplates.png",
+      url: "https://shorturl.at/eouTU",
+    },
+    {
       title: "Dashboard App",
-      description: "A dashboard application built with React and Material UI",
-      image: "/admin_dashboard.jpg",
+      description:
+        "A stylish dashboard app, made with React components and powered by Material UI for a sleek and intuitive user experience.",
+      image: "/adminDashboard.png",
       url: "https://admin-dashboard-react-eta.vercel.app/",
     },
     {
       title: "Top Weather App",
       description:
-        "A weather application built with ReactJS and OpenWeatherMap API",
+        "A stylish weather app made with ReactJS, leveraging the OpenWeatherMap API for precise forecasts.",
       image: "/weather.png",
       url: "https://react-weather-app-made-by-ankit.vercel.app/",
     },
+    
     {
       // title: "Social App",
       title: "Coming Soon...",
-      description: "A social media app built with React, Redux and Firebase",
-      image: "/admin_dashboard.jpg",
-      url: "/",
-    },
-    {
-      // title: "Ecommerce Website",
-      title: "Coming Soon...",
-      description:
-        "An ecommerce website to sell products built with Next.js, Stripe and MongoDB",
-      image: "/admin_dashboard.jpg",
+      description: "A React-based social media application integrated with Redux for state management and Firebase for backend services.",
+      image: "/chat.png",
       url: "/",
     },
   ];
@@ -42,11 +44,11 @@ export default function Home() {
       <PageLayout title="Dashboard">
         <div className="p-5 md:px-10 grid grid-cols-1 md:grid-cols-3 gap-4 bg-gradient-to-r from-gray-500 to-red-500 rounded-md">
           <div className="col-span-2  flex items-center ">
-              <img
-                src="/ankit.png"
-                alt="Profile Pic"
-                className=" w-1/5 h-auto rounded-full border-white border-4 border-solid"
-              />
+            <img
+              src="/ankit.png"
+              alt="Profile Pic"
+              className=" w-1/5 h-auto rounded-full border-white border-4 border-solid"
+            />
             <div className="ml-5 flex flex-col ">
               <h3 className="text-3xl font-bold text-white">Ankit Singh</h3>
               <p className="text-sm">Software Engineer</p>
@@ -78,35 +80,34 @@ export default function Home() {
           <p className="text-white text-2xl font-bold">Projects</p>
         </div>
 
-        <div className="p-5  md:p-10 grid grid-cols-1 md:grid-cols-4 gap-4  ">
+        <div className="p-5 md:p-10 grid grid-cols-1 md:grid-cols-4 gap-4">
           {project.map((item, index) => (
-            <div key={index} className="">
+            <div key={index}>
               <div className="rounded-t-xl overflow-hidden relative">
-                <a href={item.url} target="_blank">
+                <a target="_blank" href={item.url}  rel="noopener noreferrer">
                   <img
-                    className="opacity-80 w-full h-full object-cover"
+                    className="opacity-95 w-full h-auto object-cover bg-slate-100"
                     src={item.image}
                     alt={item.title}
-                    height={200}
-                    width={500}
                     style={{
                       width: "100%",
-                      aspectRatio: 1 / 1,
-                      height: "170px",
+                      aspectRatio: "1 / 1",
+                      height: "220px",
                       objectFit: "cover",
                     }}
                   />
-                   {/* <div className="overlay-text absolute top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">
-                      <h5 className="mb-2 text-md font-bold text-white">{item.title}</h5>
-                    </div> */}
+                  {/* Overlay Text (Uncomment if needed) */}
+                  {/* <div className="overlay-text absolute top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">
+                    <h5 className="mb-2 text-md font-bold text-white">{item.title}</h5>
+                  </div> */}
                 </a>
-                <div className="p-5 bg-white  rounded-b-xl overflow-hidden">
+                <div className="p-5 bg-white rounded-b-xl overflow-hidden">
                   <a href={item.url}>
                     <h5 className="mb-2 text-md font-bold text-black">
                       {item.title}
                     </h5>
                   </a>
-                  <p className="mb-3 text-xs font-normal text-black ">
+                  <p className="mb-3 text-xs font-normal text-black text-justify">
                     {item.description}
                   </p>
                 </div>
