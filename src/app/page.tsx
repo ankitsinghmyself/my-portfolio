@@ -17,14 +17,14 @@ export default function Home() {
       url: "https://shorturl.at/eouTU",
     },
     {
-      title: "Dashboard App",
+      title: "Admin Dashboard",
       description:
-        "A stylish dashboard app, made with React components and powered by Material UI for a sleek and intuitive user experience.",
+        "A stylish admin dashboard, made with React components and powered by Material UI for a sleek and intuitive user experience.",
       image: "/adminDashboard.png",
       url: "https://admin-dashboard-react-eta.vercel.app/",
     },
     {
-      title: "Top Weather App",
+      title: "Weather App",
       description:
         "A stylish weather app made with ReactJS, leveraging the OpenWeatherMap API for precise forecasts.",
       image: "/weather.png",
@@ -76,24 +76,21 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="p-5 md:p-10 -mb-10 grid grid-cols-1 gap-4  ">
+        <div className="pb-5 md:p-5 -mb-10 grid grid-cols-1 gap-4  ">
           <p className="text-white text-2xl font-bold">Projects</p>
         </div>
 
         <div className="p-5 md:p-10 grid grid-cols-1 md:grid-cols-4 gap-4">
           {project.map((item, index) => (
             <div key={index}>
-              <div className="rounded-t-xl overflow-hidden relative">
+              <div className="rounded-t-md overflow-hidden relative ">
                 <a target="_blank" href={item.url}  rel="noopener noreferrer">
                   <img
-                    className="opacity-95 w-full h-auto object-cover bg-slate-100"
+                    className="opacity-95 w-full h-60  bg-slate-100"
                     src={item.image}
                     alt={item.title}
                     style={{
-                      width: "100%",
                       aspectRatio: "1 / 1",
-                      height: "220px",
-                      objectFit: "cover",
                     }}
                   />
                   {/* Overlay Text (Uncomment if needed) */}
@@ -101,13 +98,13 @@ export default function Home() {
                     <h5 className="mb-2 text-md font-bold text-white">{item.title}</h5>
                   </div> */}
                 </a>
-                <div className="p-5 bg-white rounded-b-xl overflow-hidden">
+                <div className="p-5 bg-white rounded-b-md overflow-hidden">
                   <a href={item.url}>
                     <h5 className="mb-2 text-md font-bold text-black">
                       {item.title}
                     </h5>
                   </a>
-                  <p className="mb-3 text-xs font-normal text-black text-justify">
+                  <p className=" text-xs font-normal text-black text-justify">
                     {item.description}
                   </p>
                 </div>
@@ -121,7 +118,7 @@ export default function Home() {
           <p className="text-white text-2xl font-bold">What I know</p>
         </div>
         <div className="p-5  md:p-10 grid grid-cols-1 md:grid-cols-5 gap-4  ">
-          <div className="max-w-sm bg-gray-800   rounded-lg shadow  dark:border-gray-700">
+          <div className="max-w-sm bg-gray-800   rounded-md shadow  dark:border-gray-700">
             <div className="p-5">
               <h5 className="mb-2 text-[1.125rem] font-medium tracking-tight text-white">
                 Frontend
@@ -186,7 +183,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="max-w-sm bg-gray-800  rounded-lg shadow  dark:border-gray-700">
+          <div className="max-w-sm bg-gray-800  rounded-md shadow  dark:border-gray-700">
             <div className="p-5">
               <h5 className="mb-2 text-[1.125rem] font-medium tracking-tight text-white">
                 Backend
@@ -211,7 +208,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="max-w-sm bg-gray-800  rounded-lg shadow  dark:border-gray-700">
+          <div className="max-w-sm bg-gray-800  rounded-md shadow  dark:border-gray-700">
             <div className="p-5">
               <h5 className="mb-2 text-[1.125rem] font-medium tracking-tight text-white">
                 Database
@@ -236,7 +233,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="max-w-sm bg-gray-800  rounded-lg shadow  dark:border-gray-700">
+          <div className="max-w-sm bg-gray-800  rounded-md shadow  dark:border-gray-700">
             <div className="p-5">
               <h5 className="mb-2 text-[1.125rem] font-medium tracking-tight text-white">
                 Devops
