@@ -17,12 +17,19 @@ export default function Home() {
       url: "https://shorturl.at/eouTU",
     },
     {
-      title: "Admin Dashboard",
+      title: "Portfolio Sample",
       description:
-        "A stylish admin dashboard, made with React components and powered by Material UI for a sleek and intuitive user experience.",
-      image: "/adminDashboard.png",
-      url: "https://admin-dashboard-react-eta.vercel.app/",
+      "A sleek and responsive user experience is delivered through a sample portfolio website crafted using Next.js and Tailwind CSS, powered by Sainty.io.",
+      image: "/portfolio.png",
+      url: "https://rb.gy/sx1doc",
     },
+    // {
+    //   title: "Admin Dashboard",
+    //   description:
+    //     "A stylish admin dashboard, made with React components and powered by Material UI for a sleek and intuitive user experience.",
+    //   image: "/adminDashboard.png",
+    //   url: "https://admin-dashboard-react-eta.vercel.app/",
+    // },
     {
       title: "Weather App",
       description:
