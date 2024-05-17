@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import React, { useState } from "react";
-import { MdHome } from "react-icons/md";
+import { MdClose, MdHome } from "react-icons/md";
 import { VscGithub } from "react-icons/vsc";
 import { FaStackOverflow } from "react-icons/fa";
 import { motion } from "framer-motion";
@@ -12,7 +12,7 @@ interface SidebarProps {
 }
 
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
-  const sidebarClass = ` bg-dark text-gray-300 w-full md:w-64  p-4 fixed top-0 left-0 h-full z-50 overflow-y-auto transition-transform duration-300 transform ${
+  const sidebarClass = ` bg-dark text-gray-300 w-[80%] md:w-64  p-4 fixed top-0 left-0 h-full z-50 overflow-y-auto transition-transform duration-300 transform ${
     isOpen ? "translate-x-0" : "-translate-x-full md:translate-x-0"
   }`;
 
@@ -37,7 +37,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
         onClick={toggleSidebar}
         className="text-gray-300 p-2 focus:outline-none md:hidden"
       >
-        Close
+        <MdClose />
       </button>
       <h1 className="text-2xl font-bold mb-4">Ankit Singh</h1>
       <ul>

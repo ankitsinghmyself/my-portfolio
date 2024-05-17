@@ -39,11 +39,10 @@ export default function Home() {
     },
     
     {
-      // title: "Social App",
-      title: "Coming Soon...",
-      description: "A React-based social media application integrated with Redux for state management and Firebase for backend services.",
-      image: "/chat.png",
-      url: "/",
+      title: "Chatify",
+      description: "A social media application built with Next.js and seamlessly integrated with Firebase for user authentication.",
+      image: "/chatify.png",
+      url: "https://github.com/ankitsinghmyself/chatify",
     },
   ];
   return (
@@ -83,21 +82,23 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="pb-5 md:p-10 -mb-10 grid grid-cols-1 gap-4  ">
+        <div className="py-5  md:p-10 grid grid-cols-1 gap-4  ">
           <p className="text-white text-2xl font-bold">Projects</p>
         </div>
 
-        <div className="p-5 md:p-10 grid grid-cols-1 md:grid-cols-4 gap-4">
+        <div className=" md:p-10 grid grid-cols-1 md:grid-cols-4 gap-4">
           {project.map((item, index) => (
-            <div key={index}>
-              <div className="rounded-t-md overflow-hidden relative ">
-                <a target="_blank" href={item.url}  rel="noopener noreferrer">
-                  <img
-                    className="opacity-95 w-full h-60  bg-slate-100"
-                    src={item.image}
-                    alt={item.title}
+            <div key={index} style={{ height: '400px', backgroundColor: '#fff', borderRadius: '12px' }} >
+              <div className="rounded-t-md overflow-hidden relative "  >
+                <a target="_blank" href={item.url}  rel="noopener noreferrer" >
+                  <div
+                    className="opacity-95 w-full h-60  bg-slate-100" 
                     style={{
                       aspectRatio: "1 / 1",
+                      backgroundImage: `url(${item.image})`,
+                      backgroundSize: 'contain',
+                      backgroundPosition: 'center',
+                      backgroundRepeat: 'no-repeat'
                     }}
                   />
                   {/* Overlay Text (Uncomment if needed) */}
@@ -121,10 +122,10 @@ export default function Home() {
         </div>
 
         {/* what i know */}
-        <div className="p-5 md:p-10 -mb-10 -mt-10 grid grid-cols-1 gap-4  ">
+        <div className="py-5  md:p-10 grid grid-cols-1 gap-4  ">
           <p className="text-white text-2xl font-bold">What I know</p>
         </div>
-        <div className="p-5  md:p-10 grid grid-cols-1 md:grid-cols-5 gap-4  ">
+        <div className=" md:p-10 grid grid-cols-1 md:grid-cols-5 gap-4  ">
           <div className="max-w-sm bg-gray-800   rounded-md shadow  dark:border-gray-700">
             <div className="p-5">
               <h5 className="mb-2 text-[1.125rem] font-medium tracking-tight text-white">
@@ -187,6 +188,14 @@ export default function Home() {
                 >
                   NextJS 13
                 </div>
+                <div
+                  data-te-chip-init
+                  data-te-ripple-init
+                  className="[word-wrap: break-word] my-[5px] mr-4 flex h-[32px] border-red-300 border-[1px]  items-center justify-between rounded-md bg-dark px-[8px] py-0 text-[.75rem] font-normal normal-case leading-loose text-gray-400 shadow-none transition-[opacity] duration-300 ease-linear hover:!shadow-none "
+                  data-te-close="true"
+                >
+                 Socket.IO
+                </div>
               </div>
             </div>
           </div>
@@ -211,6 +220,14 @@ export default function Home() {
                   data-te-close="true"
                 >
                   Express Js
+                </div>
+                <div
+                  data-te-chip-init
+                  data-te-ripple-init
+                  className="[word-wrap: break-word] my-[5px] mr-4 flex h-[32px] border-red-300 border-[1px]  items-center justify-between rounded-md bg-dark px-[8px] py-0 text-[.75rem] font-normal normal-case leading-loose text-gray-400 shadow-none transition-[opacity] duration-300 ease-linear hover:!shadow-none "
+                  data-te-close="true"
+                >
+                 Socket.IO
                 </div>
               </div>
             </div>

@@ -47,9 +47,8 @@ const PageLayout: React.FC<PageLayoutProps> = ({
       <Sidebar isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
 
       {/* Main Content */}
-      <div className={`bg-dark text-gray-300 flex-1 p-4 ml-0 md:ml-64 `}>
-        
-        {/*<div className="mb-4 lg:flex lg:justify-between lg:items-center">
+      <div className={`bg-dark text-gray-300 flex-1 p-4 ml-0 md:ml-64 ${isSidebarOpen ? 'opacity-50 fixed' : ''}`}>
+        {/* <div className="mb-4 lg:flex lg:justify-between lg:items-center">
                 <div className="lg:w-2/3">
                     <h2 className="text-xl font-bold">{title}</h2>
                     <div>{actions}</div>
@@ -57,7 +56,7 @@ const PageLayout: React.FC<PageLayoutProps> = ({
                 <div className="lg:w-1/3">
                     Empty div to push content to the right in large screens
                 </div> 
-            </div>*/}
+            </div> */}
         <div>{children}</div>
       </div>
     </div>
