@@ -14,7 +14,7 @@ const Projects: React.FC = () => {
       description:
         "A website template using React, Next.js, TypeScript, Chakra UI, and CSS, providing Developer-Friendly UI Templates for Instant Deployment.",
       image: "/uiTemplates.png",
-      url: "https://shorturl.at/eouTU",
+      url: "https://ui-templates-zeta.vercel.app/",
     },
     // {
     //   title: "Portfolio Sample",
