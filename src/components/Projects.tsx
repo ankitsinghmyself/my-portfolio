@@ -16,13 +16,13 @@ const Projects: React.FC = () => {
       image: "/uiTemplates.png",
       url: "https://ui-templates-zeta.vercel.app/",
     },
-    // {
-    //   title: "Portfolio Sample",
-    //   description:
-    //     "A sleek and responsive user experience is delivered through a sample portfolio website crafted using Next.js and Tailwind CSS, powered by Sainty.io.",
-    //   image: "/portfolio.png",
-    //   url: "https://ankitsinghmyself1.vercel.app/",
-    // },
+    {
+      title: "Travel Website Sample",
+      description:
+        "A sleek and responsive user experience is delivered through a sample portfolio website crafted using Next.js, TypeScript, and Tailwind CSS",
+      image: "/travel.png",
+      url: "https://travel-website-sample-ten.vercel.app/",
+    },
     {
       title: "Weather App",
       description:

@@ -47,16 +47,19 @@ const PageLayout: React.FC<PageLayoutProps> = ({
       <Sidebar isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
 
       {/* Main Content */}
-      <div className={`bg-dark text-gray-300 flex-1 p-4 ml-0 md:ml-64 ${isSidebarOpen ? 'opacity-50 fixed' : ''}`}>
-        {/* <div className="mb-4 lg:flex lg:justify-between lg:items-center">
-                <div className="lg:w-2/3">
-                    <h2 className="text-xl font-bold">{title}</h2>
-                    <div>{actions}</div>
-                </div>
-                <div className="lg:w-1/3">
-                    Empty div to push content to the right in large screens
-                </div> 
-            </div> */}
+      <div
+        className={`bg-dark text-gray-300 flex-1 p-4 ml-0 md:ml-64 ${
+          isSidebarOpen ? "opacity-50 fixed" : ""
+        }`}
+      >
+        {/* <div className="hidden mb-4 md:flex md:justify-end md:gap-3 lg:flex lg:justify-end lg:gap-5 lg:items-center">
+          <button className="bg-transparent text-white hover:bg-gray-100 hover:text-gray-800 font-semibold py-1 px-4 border border-gray-400 rounded shadow">
+            Skills
+          </button>
+          <button className="bg-transparent text-white hover:bg-gray-100 hover:text-gray-800 font-semibold py-1 px-4 border border-gray-400 rounded shadow">
+            Projects
+          </button>
+        </div> */}
         <div>{children}</div>
       </div>
     </div>
