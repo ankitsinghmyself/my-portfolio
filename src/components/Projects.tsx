@@ -37,6 +37,13 @@ const Projects: React.FC = () => {
       image: "/chatify.png",
       url: "https://github.com/ankitsinghmyself/chatify",
     },
+    {
+      title: "Covid19",
+      description:
+        "Covid-19 is a React Native app that shows the current status of the COVID-19 pandemic in India.",
+      image: "/projects/covid.png",
+      url: "https://github.com/ankitsinghmyself/React-Native-App-Covid19",
+    },
   ];
 
   return (
@@ -51,7 +58,7 @@ const Projects: React.FC = () => {
             <div className="rounded-t-md overflow-hidden relative">
               <a target="_blank" href={project.url} rel="noopener noreferrer">
                 <div
-                  className="opacity-95 w-full h-40 bg-slate-100"
+                  className="opacity-95 w-full h-40 bg-slate-200"
                   style={{
                     aspectRatio: "1 / 1",
                     backgroundImage: `url(${project.image})`,

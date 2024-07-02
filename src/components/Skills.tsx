@@ -21,10 +21,14 @@ interface SkillCategoryProps {
 
 const SkillCategory: React.FC<SkillCategoryProps> = ({ title, chips }) => (
   <div className="max-w-md w-full bg-gray-800 rounded-md shadow dark:border-gray-700">
-    <div style={{
-        padding:'1.25rem 0 1.25rem  1.25rem  '
-    }}>
-      <h5 className="mb-2 text-lg font-medium tracking-tight text-white">{title}</h5>
+    <div
+      style={{
+        padding: "1.25rem 0 1.25rem  1.25rem  ",
+      }}
+    >
+      <h5 className="mb-2 text-lg font-medium tracking-tight text-white">
+        {title}
+      </h5>
       <div className="flex flex-wrap">
         {chips.map((skill, index) => (
           <Chip key={index} label={skill.label} color={skill.color} />
@@ -39,27 +43,28 @@ const Skills: React.FC = () => {
     { label: "HTML", color: "blue" },
     { label: "CSS", color: "blue" },
     { label: "Tailwind", color: "blue" },
-    { label: "JavaScript", color: "blue" },
+    { label: "JavaScript", color: "orange" },
     { label: "TypeScript", color: "blue" },
     { label: "React JS", color: "red" },
     { label: "NextJS 14", color: "red" },
-    { label: "Socket.IO", color: "red" }
+    { label: "Socket.IO", color: "red" },
+    { label: "React Native", color: "green" },
   ];
 
   const backendSkills = [
     { label: "Node JS", color: "orange" },
     { label: "Express JS", color: "orange" },
-    { label: "Socket.IO", color: "red" }
+    { label: "Socket.IO", color: "red" },
   ];
 
   const databaseSkills = [
     { label: "MySQL", color: "yellow" },
-    { label: "MongoDB", color: "yellow" }
+    { label: "MongoDB", color: "yellow" },
   ];
 
   const devopsSkills = [
     { label: "Git", color: "green" },
-    { label: "Docker", color: "green" }
+    { label: "Docker", color: "green" },
   ];
 
   return (
@@ -67,10 +72,16 @@ const Skills: React.FC = () => {
       <p className="text-white text-2xl font-bold">What I know</p>
 
       <div className=" grid grid-cols-1 md:grid-cols-4 gap-4">
-        <SkillCategory title="Frontend" chips={frontendSkills} />
-        <SkillCategory title="Backend" chips={backendSkills} />
-        <SkillCategory title="Database" chips={databaseSkills} />
-        <SkillCategory title="Devops" chips={devopsSkills} />
+        {frontendSkills && (
+          <SkillCategory title="Frontend" chips={frontendSkills} />
+        )}
+        {backendSkills && (
+          <SkillCategory title="Backend" chips={backendSkills} />
+        )}
+        {databaseSkills && (
+          <SkillCategory title="Database" chips={databaseSkills} />
+        )}
+        {devopsSkills && <SkillCategory title="Devops" chips={devopsSkills} />}
       </div>
     </div>
   );
