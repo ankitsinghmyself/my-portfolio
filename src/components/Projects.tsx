@@ -47,7 +47,7 @@ const Projects: React.FC = () => {
     {
       title: "eShop",
       description:
-        "eShop is an e-commerce website that utilizes Redux, Prisma, Chart.js, and NextAuth with Google for enhanced functionality and user authentication.",
+        "eShop is an e-commerce website with Admin panel that utilizes Redux, Prisma, Chart.js, and NextAuth with Google for enhanced functionality and user authentication.",
       image: "/projects/eshop.png",
       url: "https://github.com/ankitsinghmyself/eshop",
     },
