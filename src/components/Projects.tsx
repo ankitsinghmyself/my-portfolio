@@ -51,6 +51,12 @@ const Projects: React.FC = () => {
       image: "/projects/eshop.png",
       url: "https://github.com/ankitsinghmyself/eshop",
     },
+    {
+      title: "Eurecab Mobile App",
+      description:"Eurcab is based in France and from this mobile application, people are able to search cab/taxi and book it.",
+      image: "/projects/eurecab.png",
+      url: "https://apps.apple.com/fr/app/eurecab-chauffeur-priv%C3%A9-vtc/id1295787129",
+    }
   ];
 
   return (
