@@ -56,6 +56,12 @@ const Projects: React.FC = () => {
       description:"Eurcab is based in France and from this mobile application, people are able to search cab/taxi and book it.",
       image: "/projects/eurecab.png",
       url: "https://apps.apple.com/fr/app/eurecab-chauffeur-priv%C3%A9-vtc/id1295787129",
+    },
+    {
+      title: "The Wellness Shop",
+      description:"Developed the website from scratch and responsible for Front-end and Back-end development coding and managing CRM under senior developers.",
+      image: "/projects/wellness.png",
+      url: "https://www.thewellnessshop.in/",
     }
   ];
 
@@ -82,7 +88,7 @@ const Projects: React.FC = () => {
                 />
               </a>
               <div className="p-5 bg-white rounded-b-md overflow-hidden">
-                <a href={project.url}>
+                <a href={project.url} target="_blank" rel="noopener noreferrer">
                   <h5 className="mb-2 text-md font-bold text-black">{project.title}</h5>
                 </a>
                 <p className="text-xs font-normal text-black text-justify">{project.description}</p>
