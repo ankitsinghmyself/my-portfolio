@@ -7,6 +7,7 @@ interface Project {
   image: string;
   techstack: TechStack[];
   githubUrl: string;
+  requiresMobileView: boolean;
   demoUrl: string;
 }
 interface TechStack {
@@ -55,6 +56,7 @@ const Projects: React.FC = () => {
         },
       ],
       githubUrl: "https://github.com/ankitsinghmyself/ui-templates",
+      requiresMobileView: false,
       demoUrl: "https://ui-templates-zeta.vercel.app/",
     },
     {
@@ -78,6 +80,7 @@ const Projects: React.FC = () => {
         
       ],
       githubUrl: "https://github.com/ankitsinghmyself/travel-website",
+      requiresMobileView: false,
       demoUrl: "https://travel-website-sample.vercel.app/",
     },
     {
@@ -100,6 +103,7 @@ const Projects: React.FC = () => {
         },
       ],
       githubUrl: "https://github.com/ankitsinghmyself/react-weather-app",
+      requiresMobileView: false,
       demoUrl: "https://react-weather-app-made-by-ankit.vercel.app/",
     },
     {
@@ -118,6 +122,7 @@ const Projects: React.FC = () => {
         },
       ],
       githubUrl: "https://github.com/ankitsinghmyself/Chatify",
+      requiresMobileView: false,
       demoUrl: "",
     },
     {
@@ -140,6 +145,7 @@ const Projects: React.FC = () => {
         },
       ],
       githubUrl: "https://github.com/ankitsinghmyself/covid-19",
+      requiresMobileView: false,
       demoUrl: "",
     },
     {
@@ -166,6 +172,7 @@ const Projects: React.FC = () => {
         },
       ],
       githubUrl: "https://github.com/ankitsinghmyself/eshop",
+      requiresMobileView: false,
       demoUrl: "",
     },
     {
@@ -188,6 +195,7 @@ const Projects: React.FC = () => {
         },
       ],
       githubUrl: "",
+      requiresMobileView: false,
       demoUrl: "https://apps.apple.com/fr/app/eurecab/id1295787129",
     },
     {
@@ -210,6 +218,7 @@ const Projects: React.FC = () => {
         },
       ],
       githubUrl: "",
+      requiresMobileView: false,
       demoUrl: "https://www.thewellnessshop.in/",
     },
     {
@@ -232,6 +241,7 @@ const Projects: React.FC = () => {
         },
       ],
       githubUrl: "",
+      requiresMobileView: true,
       demoUrl: "https://games.abplive.com/",
     },
     {
@@ -249,9 +259,23 @@ const Projects: React.FC = () => {
         },
       ],
       githubUrl: "https://github.com/ankitsinghmyself/sample-portfolio1",
+      requiresMobileView: false,
       demoUrl: "https://ankitsinghmyself1.vercel.app/",
     }
   ];
+  const openInMobileView = (url: string) => {
+    const width = 375;  // Width of an iPhone X
+    const height = 667; // Height of an iPhone X
+    window.open(url, "_blank", `width=${width},height=${height},toolbar=no,menubar=no,scrollbars=yes`);
+  }
+  
+  const  handleDemoClick = (url: string, requiresMobileView: boolean) => {
+    if (requiresMobileView) {
+      openInMobileView(url);
+    } else {
+      window.open(url, "_blank", 'noopener,noreferrer');
+    }
+  }
   return (
     <div className="">
       <div className="py-5 md:py-5 grid grid-cols-1 gap-4">
@@ -286,14 +310,13 @@ const Projects: React.FC = () => {
                   </h5>
                   <div className="flex items-center justify-between">
                     {project.demoUrl && (
-                      <a
-                        href={project.demoUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-xs font-normal text-black mr-2"
-                      >
-                        <FaExternalLinkAlt  />
-                      </a>
+                                          <button
+                                          onClick={() => handleDemoClick(project.demoUrl, project.requiresMobileView)}
+                                          className="text-xs font-normal text-black mr-2"
+                                        >
+                                          <FaExternalLinkAlt />
+                                        </button>
+                    
                     )}
                     {project.githubUrl && (
                       <a
