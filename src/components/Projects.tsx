@@ -33,6 +33,33 @@ const Chip: React.FC<ChipProps> = ({ label, color }) => (
 const Projects: React.FC = () => {
   const projects: Project[] = [
     {
+      title: "eShop",
+      description:
+        "eShop is an e-commerce website with Admin panel that utilizes Redux, Prisma, Chart.js, and NextAuth with Google for enhanced functionality and user authentication.",
+      image: "/projects/eshop.png",
+      techstack: [
+        {
+          label: "NextJS",
+          color: "#00D0B8",
+        },
+        {
+          label: "Prisma",
+          color: "#007ACC",
+        },
+        {
+          label: "MUI 5",
+          color: "#00B8D9",
+        },
+        {
+          label: "TS",
+          color: "#61dafb",
+        },
+      ],
+      githubUrl: "https://github.com/ankitsinghmyself/eshop",
+      requiresMobileView: false,
+      demoUrl: "https://eshop-ankitsinghmyself.vercel.app/",
+    },
+    {
       title: "UI Templates",
       description:
         "A website template using React, Next.js, TypeScript, Chakra UI, and CSS, providing Developer-Friendly UI Templates for Instant Deployment.",
@@ -59,6 +86,7 @@ const Projects: React.FC = () => {
       requiresMobileView: false,
       demoUrl: "https://ui-templates-zeta.vercel.app/",
     },
+
     {
       title: "Travel Website Sample",
       description:
@@ -77,7 +105,6 @@ const Projects: React.FC = () => {
           label: "MUI 5",
           color: "#00B8D9",
         },
-        
       ],
       githubUrl: "https://github.com/ankitsinghmyself/travel-website",
       requiresMobileView: false,
@@ -148,33 +175,7 @@ const Projects: React.FC = () => {
       requiresMobileView: false,
       demoUrl: "",
     },
-    {
-      title: "eShop",
-      description:
-        "eShop is an e-commerce website with Admin panel that utilizes Redux, Prisma, Chart.js, and NextAuth with Google for enhanced functionality and user authentication.",
-      image: "/projects/eshop.png",
-      techstack: [
-        {
-          label: "NextJS",
-          color: "#00D0B8",
-        },
-        {
-          label: "Prisma",
-          color: "#007ACC",
-        },
-        {
-          label: "MUI 5",
-          color: "#00B8D9",
-        },
-        {
-          label: "TS",
-          color: "#61dafb",
-        },
-      ],
-      githubUrl: "https://github.com/ankitsinghmyself/eshop",
-      requiresMobileView: false,
-      demoUrl: "https://eshop-ankitsinghmyself.vercel.app/",
-    },
+
     {
       title: "Eurecab Mobile App",
       description:
@@ -246,7 +247,8 @@ const Projects: React.FC = () => {
     },
     {
       title: "Portfolio Showcase",
-      description: "A portfolio website built with Next.js and Sanity.io, showcasing sample projects and work.",
+      description:
+        "A portfolio website built with Next.js and Sanity.io, showcasing sample projects and work.",
       image: "/projects/samplePortfolio1.png",
       techstack: [
         {
@@ -261,21 +263,25 @@ const Projects: React.FC = () => {
       githubUrl: "https://github.com/ankitsinghmyself/sample-portfolio1",
       requiresMobileView: false,
       demoUrl: "https://ankitsinghmyself1.vercel.app/",
-    }
+    },
   ];
   const openInMobileView = (url: string) => {
-    const width = 375;  // Width of an iPhone X
+    const width = 375; // Width of an iPhone X
     const height = 667; // Height of an iPhone X
-    window.open(url, "_blank", `width=${width},height=${height},toolbar=no,menubar=no,scrollbars=yes`);
-  }
-  
-  const  handleDemoClick = (url: string, requiresMobileView: boolean) => {
+    window.open(
+      url,
+      "_blank",
+      `width=${width},height=${height},toolbar=no,menubar=no,scrollbars=yes`
+    );
+  };
+
+  const handleDemoClick = (url: string, requiresMobileView: boolean) => {
     if (requiresMobileView) {
       openInMobileView(url);
     } else {
-      window.open(url, "_blank", 'noopener,noreferrer');
+      window.open(url, "_blank", "noopener,noreferrer");
     }
-  }
+  };
   return (
     <div className="">
       <div className="py-5 md:py-5 grid grid-cols-1 gap-4">
@@ -310,13 +316,17 @@ const Projects: React.FC = () => {
                   </h5>
                   <div className="flex items-center justify-between">
                     {project.demoUrl && (
-                                          <button
-                                          onClick={() => handleDemoClick(project.demoUrl, project.requiresMobileView)}
-                                          className="text-xs font-normal text-black mr-2"
-                                        >
-                                          <FaExternalLinkAlt />
-                                        </button>
-                    
+                      <button
+                        onClick={() =>
+                          handleDemoClick(
+                            project.demoUrl,
+                            project.requiresMobileView
+                          )
+                        }
+                        className="text-xs font-normal text-black mr-2"
+                      >
+                        <FaExternalLinkAlt />
+                      </button>
                     )}
                     {project.githubUrl && (
                       <a
@@ -325,7 +335,7 @@ const Projects: React.FC = () => {
                         rel="noopener noreferrer"
                         className="text-xs font-normal text-black mr-2"
                       >
-                        <FaGithub/>
+                        <FaGithub />
                       </a>
                     )}
                   </div>
