@@ -173,7 +173,7 @@ const Projects: React.FC = () => {
       ],
       githubUrl: "https://github.com/ankitsinghmyself/eshop",
       requiresMobileView: false,
-      demoUrl: "",
+      demoUrl: "https://eshop-ankitsinghmyself.vercel.app/",
     },
     {
       title: "Eurecab Mobile App",
