@@ -309,6 +309,7 @@ const Projects: React.FC = () => {
                   backgroundSize: "contain",
                   backgroundPosition: "center",
                   backgroundRepeat: "no-repeat",
+                  cursor: "pointer",
                 }}
               />
               <div className="p-5 bg-white rounded-b-md overflow-hidden">
