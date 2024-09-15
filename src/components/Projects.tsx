@@ -86,7 +86,6 @@ const Projects: React.FC = () => {
       requiresMobileView: false,
       demoUrl: "https://ui-templates-zeta.vercel.app/",
     },
-
     {
       title: "Travel Website Sample",
       description:
