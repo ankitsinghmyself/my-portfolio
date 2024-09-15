@@ -299,6 +299,9 @@ const Projects: React.FC = () => {
           >
             <div className="rounded-t-md overflow-hidden relative">
               <div
+                onClick={() =>
+                  handleDemoClick(project.demoUrl, project.requiresMobileView)
+                }
                 className="opacity-95 w-full h-40 bg-slate-200"
                 style={{
                   aspectRatio: "1 / 1",
