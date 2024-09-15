@@ -107,7 +107,7 @@ const Projects: React.FC = () => {
       ],
       githubUrl: "https://github.com/ankitsinghmyself/travel-website",
       requiresMobileView: false,
-      demoUrl: "https://travel-website-sample.vercel.app/",
+      demoUrl: "https://travel-website-sample-ten.vercel.app/",
     },
     {
       title: "Weather App",
