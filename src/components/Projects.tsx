@@ -174,53 +174,6 @@ const Projects: React.FC = () => {
       requiresMobileView: false,
       demoUrl: "",
     },
-
-    {
-      title: "Eurecab Mobile App",
-      description:
-        "Eurcab is based in France and from this mobile application, people are able to search cab/taxi and book it.",
-      image: "/projects/eurecab.png",
-      techstack: [
-        {
-          label: "React Native",
-          color: "#00D0B8",
-        },
-        {
-          label: "Android",
-          color: "#007ACC",
-        },
-        {
-          label: "iOS",
-          color: "#61dafb",
-        },
-      ],
-      githubUrl: "",
-      requiresMobileView: false,
-      demoUrl: "https://apps.apple.com/fr/app/eurecab/id1295787129",
-    },
-    {
-      title: "The Wellness Shop",
-      description:
-        "Developed the website from scratch and responsible for Front-end and Back-end development coding and managing CRM under senior developers.",
-      image: "/projects/wellness.png",
-      techstack: [
-        {
-          label: "HTML",
-          color: "#00D0B8",
-        },
-        {
-          label: "JS",
-          color: "#007ACC",
-        },
-        {
-          label: "CSS",
-          color: "#61dafb",
-        },
-      ],
-      githubUrl: "",
-      requiresMobileView: false,
-      demoUrl: "https://www.thewellnessshop.in/",
-    },
     {
       title: "Game Masti",
       description:
