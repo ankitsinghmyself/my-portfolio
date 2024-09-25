@@ -133,25 +133,6 @@ const Projects: React.FC = () => {
       demoUrl: "https://react-weather-app-made-by-ankit.vercel.app/",
     },
     {
-      title: "Chatify",
-      description:
-        "A social media application built with Next.js and seamlessly integrated with Firebase for user authentication.",
-      image: "/chatify.png",
-      techstack: [
-        {
-          label: "NextJS",
-          color: "#00D0B8",
-        },
-        {
-          label: "Socket.IO",
-          color: "#007ACC",
-        },
-      ],
-      githubUrl: "https://github.com/ankitsinghmyself/Chatify",
-      requiresMobileView: false,
-      demoUrl: "",
-    },
-    {
       title: "Covid19",
       description:
         "Covid-19 is a React Native app that shows the current status of the COVID-19 pandemic in India.",
