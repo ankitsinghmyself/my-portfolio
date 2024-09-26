@@ -29,9 +29,9 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
     },
     {
       label: "GitHub",
-      href: "https://github.com/ankitsinghmyself",
+      href: "/git",
       icon: VscGithub,
-      type: "external",
+      type: "internal",
     },
     {
       label: "Stack overflow",

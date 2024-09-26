@@ -1,5 +1,6 @@
 "use client";
 
+import CustomButton from "@/components/comman/CustomButton";
 import Intro from "@/components/Intro";
 import PageLayout from "@/components/PageLayout";
 import Projects from "@/components/Projects";
@@ -8,9 +9,10 @@ import { color, motion, useAnimation } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect } from "react";
-import { SiLinkedin } from "react-icons/si";
+import { MdEmail } from "react-icons/md";
+import { SiGmail, SiLinkedin } from "react-icons/si";
 
-export default function Home() {
+export default function About() {
   return (
     <>
       <PageLayout title="About ME">
@@ -43,21 +45,27 @@ export default function Home() {
               </p>
 
               <div className="flex space-x-4 mt-6">
-                {/* Add links to your social profiles */}
-                <Link
-                  href="https://linkedin.com/in/ankitsinghmyself"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-blue-600 text-white px-4 py-2 rounded-lg shadow hover:bg-blue-700 transition-colors"
-                >
-                  LinkedIn
-                </Link>
-                <Link
-                  href="mailto:ankitsinghmyself@gmail.com"
-                  className="bg-gray-800 text-white px-4 py-2 rounded-lg shadow hover:bg-gray-900 transition-colors"
-                >
-                  Email
-                </Link>
+                <div className="flex flex-col items-center md:items-start">
+                  <CustomButton
+                    label="Follow me on LinkedIn"
+                    icon={SiLinkedin}
+                    onClick={() =>
+                      window.open(
+                        "https://www.linkedin.com/in/ankitsinghmyself/",
+                        "_blank"
+                      )
+                    }
+                  />
+                </div>
+                <div className="flex flex-col items-center md:items-start">
+                  <CustomButton
+                    label="Email"
+                    icon={MdEmail}
+                    onClick={() =>
+                      window.open("mailto:ankitsinghmyself@gmail.com", "_blank")
+                    }
+                  />
+                </div>
               </div>
             </div>
           </div>
