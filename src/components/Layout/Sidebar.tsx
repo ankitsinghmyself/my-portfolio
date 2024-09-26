@@ -29,9 +29,9 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
     },
     {
       label: "GitHub",
-      href: "/git",
+      href: "https://github.com/ankitsinghmyself",
       icon: VscGithub,
-      type: "internal",
+      type: "external",
     },
     {
       label: "Stack overflow",
@@ -45,6 +45,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
       icon: LiaUserGraduateSolid,
       type: "internal",
     },
+  
   ];
 
   return (
