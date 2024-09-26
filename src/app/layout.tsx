@@ -5,7 +5,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 const APP_NAME = "Ankit Singh";
-const APP_DEFAULT_TITLE = "My Awesome PWA Web App";
+const APP_DEFAULT_TITLE = "Ankit Singh";
 const APP_TITLE_TEMPLATE = "%s - Ankit SIngh";
 const APP_DESCRIPTION = "Best PWA app in the world!";
 

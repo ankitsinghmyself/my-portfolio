@@ -1,5 +1,6 @@
 import React from "react";
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
+import SmallChip from "./comman/SmallChip";
 
 interface Project {
   title: string;
@@ -14,22 +15,8 @@ interface TechStack {
   label: string;
   color: string;
 }
-interface ChipProps extends React.HTMLAttributes<HTMLDivElement> {
-  label: string;
-  color: string;
-}
-const Chip: React.FC<ChipProps> = ({ label, color }) => (
-  <div
-    className={`mr-1 flex items-center justify-between rounded-md bg-gray-50 px-2 text-[10px] font-normal normal-case  text-gray-400 shadow-none
-       transition-opacity duration-300 ease-linear hover:!shadow-none border-[1px] `}
-    data-te-close="true"
-    style={{
-      borderColor: `${color}`,
-    }}
-  >
-    {label}
-  </div>
-);
+
+
 const Projects: React.FC = () => {
   const projects: Project[] = [
     {
@@ -227,7 +214,7 @@ const Projects: React.FC = () => {
             key={index}
             style={{
               height: "300px",
-              backgroundColor: "#fff",
+              backgroundColor: "rgb(31 41 55 / var(--tw-bg-opacity)",
               borderRadius: "12px",
             }}
           >
@@ -236,7 +223,7 @@ const Projects: React.FC = () => {
                 onClick={() =>
                   handleDemoClick(project.demoUrl || project.githubUrl, project.requiresMobileView)
                 }
-                className="opacity-95 w-full h-40 bg-slate-200"
+                className="opacity-95 w-full h-40 bg-gray-700"
                 style={{
                   aspectRatio: "1 / 1",
                   backgroundImage: `url(${project.image})`,
@@ -246,9 +233,9 @@ const Projects: React.FC = () => {
                   cursor: "pointer",
                 }}
               />
-              <div className="p-5 bg-white rounded-b-md overflow-hidden">
+              <div className="p-5 bg-gray-800 rounded-b-md overflow-hidden">
                 <div className="flex items-baseline justify-between">
-                  <h5 className="mb-2 text-md font-bold text-black">
+                  <h5 className="mb-2 text-md font-bold ">
                     {project.title}
                   </h5>
                   <div className="flex items-center justify-between">
@@ -260,7 +247,7 @@ const Projects: React.FC = () => {
                             project.requiresMobileView
                           )
                         }
-                        className="text-xs font-normal text-black mr-2"
+                        className="text-xs font-normal  mr-2"
                       >
                         <FaExternalLinkAlt />
                       </button>
@@ -270,7 +257,7 @@ const Projects: React.FC = () => {
                         href={project.githubUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-xs font-normal text-black mr-2"
+                        className="text-xs font-normal  mr-2"
                       >
                         <FaGithub />
                       </a>
@@ -280,10 +267,10 @@ const Projects: React.FC = () => {
 
                 <div className="flex items-center justify-space-between">
                   {project.techstack.map((tech, index) => (
-                    <Chip key={index} label={tech.label} color={tech.color} />
+                    <SmallChip key={index} label={tech.label} color={tech.color} />
                   ))}
                 </div>
-                <p className="text-xs font-normal text-black text-justify line-clamp-3">
+                <p className="text-xs font-normal  text-justify line-clamp-3">
                   {project.description}
                 </p>
               </div>

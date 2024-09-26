@@ -6,6 +6,8 @@ import { VscGithub } from "react-icons/vsc";
 import { FaStackOverflow } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { LiaUserGraduateSolid } from "react-icons/lia";
+import { FcWorkflow } from "react-icons/fc";
+import { MdWorkOutline } from "react-icons/md";
 
 interface SidebarProps {
   isOpen: boolean;
@@ -19,6 +21,12 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
 
   const links = [
     { label: "Home", href: "/", icon: MdHome, type: "internal" },
+    {
+      label: "Experience",
+      href: "/experience",
+      icon: MdWorkOutline,
+      type: "internal",
+    },
     {
       label: "GitHub",
       href: "https://github.com/ankitsinghmyself",

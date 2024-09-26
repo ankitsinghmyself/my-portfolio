@@ -13,7 +13,7 @@ import { SiLinkedin } from "react-icons/si";
 export default function Home() {
   return (
     <>
-      <PageLayout title="Dashboard">
+      <PageLayout title="About ME">
         <Intro />
         <div className="py-5 md:py-5 grid grid-cols-1 gap-4">
           <p className="text-white text-2xl font-bold">About Me</p>
