@@ -5,6 +5,7 @@ import { MdClose, MdHome } from "react-icons/md";
 import { VscGithub } from "react-icons/vsc";
 import { FaStackOverflow } from "react-icons/fa";
 import { motion } from "framer-motion";
+import { LiaUserGraduateSolid } from "react-icons/lia";
 
 interface SidebarProps {
   isOpen: boolean;
@@ -17,16 +18,24 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
   }`;
 
   const links = [
-    { label: "Home", href: "/", icon: MdHome },
+    { label: "Home", href: "/", icon: MdHome, type: "internal" },
     {
       label: "GitHub",
       href: "https://github.com/ankitsinghmyself",
       icon: VscGithub,
+      type: "external",
     },
     {
       label: "Stack overflow",
       href: "https://stackoverflow.com/users/11166949/ankit-singh",
       icon: FaStackOverflow,
+      type: "external",
+    },
+    {
+      label: "About Me",
+      href: "/about",
+      icon: LiaUserGraduateSolid,
+      type: "internal",
     },
   ];
 
@@ -48,7 +57,11 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
             key={index}
             className="flex mb-5 text-gray-300 items-center"
           >
-            <Link href={link.href} target="_blank" className="flex">
+            <Link
+              href={link.href}
+              target={link.type === "external" ? "_blank" : ""}
+              className="flex"
+            >
               {link.icon && <link.icon className="inline mr-2 text-3xl" />}
               <p className="mt-1 ml-2">{link.label}</p>
             </Link>

@@ -151,7 +151,7 @@ const Projects: React.FC = () => {
           color: "#61dafb",
         },
       ],
-      githubUrl: "https://github.com/ankitsinghmyself/covid-19",
+      githubUrl: "https://github.com/ankitsinghmyself/React-Native-App-Covid19",
       requiresMobileView: false,
       demoUrl: "",
     },
@@ -234,7 +234,7 @@ const Projects: React.FC = () => {
             <div className="rounded-t-md overflow-hidden relative">
               <div
                 onClick={() =>
-                  handleDemoClick(project.demoUrl, project.requiresMobileView)
+                  handleDemoClick(project.demoUrl || project.githubUrl, project.requiresMobileView)
                 }
                 className="opacity-95 w-full h-40 bg-slate-200"
                 style={{
