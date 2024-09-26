@@ -45,3 +45,4 @@ next-env.d.ts
 yarn.lock
 public/fallback-development.js
 public/swe-worker-development.js
+package-lock.json

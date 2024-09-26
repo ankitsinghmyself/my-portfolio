@@ -1,22 +1,20 @@
-import React from "react";
+// pages/external-content.tsx
+import React from 'react';
 
-interface ExternalSiteProps {
+interface ExternalContentProps {
   url: string;
 }
 
-const ExternalSite: React.FC<ExternalSiteProps> = ({ url }) => {
+const ExternalSite: React.FC<ExternalContentProps> = ({ url }) => {
   return (
-    <>
-      <main className="w-full h-screen">
-        <iframe
-          src={url}
-          className="w-full h-full"
-          frameBorder="0"
-          allowFullScreen
-          sandbox="allow-same-origin allow-scripts allow-forms"
-        />
-      </main>
-    </>
+    <div className="w-full h-screen">
+      <iframe
+        src={`/api/fetch-site?url=${encodeURIComponent(url)}`} 
+        className="w-full h-full border-none relative"
+        allowFullScreen
+        title="External Content"
+      />
+    </div>
   );
 };
 
