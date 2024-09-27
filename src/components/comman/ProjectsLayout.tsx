@@ -100,7 +100,7 @@ const ProjectsLayout: React.FC = () => {
       title: "Weather App",
       description:
         "A stylish weather app made with ReactJS, leveraging the OpenWeatherMap API for precise forecasts.",
-      image: "/weather.png",
+      image: "/projects/weather.png",
       techstack: [
         {
           label: "ReactJS",
