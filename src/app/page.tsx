@@ -1,5 +1,6 @@
 "use client";
 
+import ProjectsLayout from "@/components/comman/ProjectsLayout";
 import Intro from "@/components/Intro";
 import PageLayout from "@/components/PageLayout";
 import Projects from "@/components/Projects";
@@ -14,8 +15,7 @@ export default function Home() {
       <PageLayout title="Dashboard">
         <Intro />
         <Skills />
-        <Projects />
-
+        <ProjectsLayout />
       </PageLayout>
     </>
   );
