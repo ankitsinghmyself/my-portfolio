@@ -20,7 +20,7 @@ const ProjectsLayout: React.FC = () => {
   const [activeTab, setActiveTab] = useState<string>("tab1");
   const projects: Project[] = [
     {
-      title: "Object Detection App",
+      title: "AI Object Detection App",
       description:
         "This application utilizes TensorFlow.js and the COCO-SSD model to detect objects in real time through your webcam. The detected objects are displayed on a canvas overlaying the video feed, and the app can audibly announce the detected objects.",
       image: "/projects/imgAi.webp",
