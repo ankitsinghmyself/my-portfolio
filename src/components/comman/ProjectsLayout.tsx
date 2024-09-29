@@ -20,6 +20,29 @@ const ProjectsLayout: React.FC = () => {
   const [activeTab, setActiveTab] = useState<string>("tab1");
   const projects: Project[] = [
     {
+      title: "Object Detection App",
+      description:
+        "This application utilizes TensorFlow.js and the COCO-SSD model to detect objects in real time through your webcam. The detected objects are displayed on a canvas overlaying the video feed, and the app can audibly announce the detected objects.",
+      image: "/projects/imgAi.webp",
+      techstack: [
+        {
+          label: "ReactJS",
+          color: "#00D0B8",
+        },
+        {
+          label: "TensorFlow.js",
+          color: "#00B8D9",
+        },
+        {
+          label: "COCO-SSD",
+          color: "#61dafb",
+        },
+      ],
+      githubUrl: "https://github.com/ankitsinghmyself/object-detection",
+      requiresMobileView: false,
+      demoUrl: "https://object-detection-lac-kappa.vercel.app/",
+    },
+    {
       title: "eShop",
       description:
         "eShop is an e-commerce website with Admin panel that utilizes Redux, Prisma, Chart.js, and NextAuth with Google for enhanced functionality and user authentication.",
