@@ -51,11 +51,15 @@ const ProjectsLayout: React.FC = () => {
       image: "/projects/imgFileExtractor.png",
       techstack: [
         {
+          label: "Executable",
+          color: "#ff3344",
+        },
+        {
           label: "Python",
           color: "#306998",
         },
         {
-          label: "Tkinter",
+          label: "Windows",
           color: "#0C4B33",
         },
       ],
