@@ -68,13 +68,18 @@ const Projects: React.FC<ProjectsProps> = ({ projects }) => {
                             project.requiresMobileView
                           )
                         }
-                        className="text-xs font-normal  mr-2"
+                        className="relative group text-xs font-normal mr-2"
                       >
                         {project.isDownload ? (
                           <FaCloudDownloadAlt />
                         ) : (
                           <FaExternalLinkAlt />
                         )}
+                        <span className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-max px-2 py-1 text-xs text-white bg-gray-700 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                          {project.isDownload
+                            ? "Download"
+                            : "Open External Link"}
+                        </span>
                       </button>
                     )}
                     {project.githubUrl && (
@@ -82,11 +87,17 @@ const Projects: React.FC<ProjectsProps> = ({ projects }) => {
                         href={project.githubUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-xs font-normal  mr-2"
+                        className="relative group text-xs font-normal mr-2"
                       >
                         <FaGithub />
+                        <span className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-max px-2 py-1 text-xs text-white bg-gray-700 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                          {project.githubUrl
+                            ? "Github"
+                            : ""}
+                        </span>
                       </a>
                     )}
+                     
                   </div>
                 </div>
 
