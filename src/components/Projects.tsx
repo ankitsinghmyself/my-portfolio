@@ -2,14 +2,13 @@ import React from "react";
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 import SmallChip from "./comman/SmallChip";
 import { Project } from "./comman/ProjectsLayout";
+import { FaCloudDownloadAlt } from "react-icons/fa";
 
 interface ProjectsProps {
   projects: Project[]; // Array of Project objects
 }
 
-
-const Projects: React.FC<ProjectsProps> = ({projects}) => {
-  
+const Projects: React.FC<ProjectsProps> = ({ projects }) => {
   const openInMobileView = (url: string) => {
     const width = 375; // Width of an iPhone X
     const height = 667; // Height of an iPhone X
@@ -29,7 +28,6 @@ const Projects: React.FC<ProjectsProps> = ({projects}) => {
   };
   return (
     <div className="">
-
       <div className=" grid grid-cols-1 md:grid-cols-4 gap-4">
         {projects.map((project, index) => (
           <div
@@ -43,7 +41,10 @@ const Projects: React.FC<ProjectsProps> = ({projects}) => {
             <div className="rounded-t-md overflow-hidden relative">
               <div
                 onClick={() =>
-                  handleDemoClick(project.demoUrl || project.githubUrl, project.requiresMobileView)
+                  handleDemoClick(
+                    project.demoUrl || project.githubUrl,
+                    project.requiresMobileView
+                  )
                 }
                 className="opacity-95 w-full h-40 bg-gray-700"
                 style={{
@@ -57,9 +58,7 @@ const Projects: React.FC<ProjectsProps> = ({projects}) => {
               />
               <div className="p-5 bg-gray-800 rounded-b-md overflow-hidden">
                 <div className="flex items-baseline justify-between">
-                  <h5 className="mb-2 text-md font-bold ">
-                    {project.title}
-                  </h5>
+                  <h5 className="mb-2 text-md font-bold ">{project.title}</h5>
                   <div className="flex items-center justify-between">
                     {project.demoUrl && (
                       <button
@@ -71,7 +70,11 @@ const Projects: React.FC<ProjectsProps> = ({projects}) => {
                         }
                         className="text-xs font-normal  mr-2"
                       >
-                        <FaExternalLinkAlt />
+                        {project.isDownload ? (
+                          <FaCloudDownloadAlt />
+                        ) : (
+                          <FaExternalLinkAlt />
+                        )}
                       </button>
                     )}
                     {project.githubUrl && (
@@ -89,7 +92,11 @@ const Projects: React.FC<ProjectsProps> = ({projects}) => {
 
                 <div className="flex items-center justify-space-between">
                   {project.techstack.map((tech, index) => (
-                    <SmallChip key={index} label={tech.label} color={tech.color} />
+                    <SmallChip
+                      key={index}
+                      label={tech.label}
+                      color={tech.color}
+                    />
                   ))}
                 </div>
                 <p className="text-xs font-normal  text-justify line-clamp-3">

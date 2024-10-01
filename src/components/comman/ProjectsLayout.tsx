@@ -10,6 +10,7 @@ export interface Project {
   techstack: TechStack[];
   githubUrl: string;
   requiresMobileView: boolean;
+  isDownload: boolean;
   demoUrl: string;
 }
 export interface TechStack {
@@ -40,26 +41,29 @@ const ProjectsLayout: React.FC = () => {
       ],
       githubUrl: "https://github.com/ankitsinghmyself/object-detection",
       requiresMobileView: false,
+      isDownload: false,
       demoUrl: "https://object-detection-lac-kappa.vercel.app/",
     },
     {
-      "title": "File Extractor App",
-      "description": "The File Extractor App allows users to efficiently copy and move files from deeply nested directory structures. Users can easily navigate through multiple layers of folders to select files for extraction. The app provides the flexibility to choose the destination folder for the extracted files, ensuring seamless organization and management of data. With a user-friendly Tkinter-based interface, it simplifies the file handling process for all users.",
-      "image": "/projects/imgFileExtractor.png",
-      "techstack": [
+      title: "File Extractor App",
+      description:
+        "The File Extractor App allows users to efficiently copy and move files from deeply nested directory structures. Users can easily navigate through multiple layers of folders to select files for extraction. The app provides the flexibility to choose the destination folder for the extracted files, ensuring seamless organization and management of data. With a user-friendly Tkinter-based interface, it simplifies the file handling process for all users.",
+      image: "/projects/imgFileExtractor.png",
+      techstack: [
         {
-          "label": "Python",
-          "color": "#306998"
+          label: "Python",
+          color: "#306998",
         },
         {
-          "label": "Tkinter",
-          "color": "#0C4B33"
-        }
+          label: "Tkinter",
+          color: "#0C4B33",
+        },
       ],
-      "githubUrl": "https://github.com/ankitsinghmyself/file_extractor",
-      "requiresMobileView": false,
-      "demoUrl": "https://shorturl.at/aJwBu"
-    },    
+      githubUrl: "https://github.com/ankitsinghmyself/file_extractor",
+      requiresMobileView: false,
+      isDownload: true,
+      demoUrl: "https://shorturl.at/aJwBu",
+    },
     {
       title: "eShop",
       description:
@@ -85,6 +89,8 @@ const ProjectsLayout: React.FC = () => {
       ],
       githubUrl: "https://github.com/ankitsinghmyself/eshop",
       requiresMobileView: false,
+      isDownload: false,
+
       demoUrl: "https://eshop-ankitsinghmyself.vercel.app/",
     },
     {
@@ -112,6 +118,8 @@ const ProjectsLayout: React.FC = () => {
       ],
       githubUrl: "https://github.com/ankitsinghmyself/ui-templates",
       requiresMobileView: false,
+      isDownload: false,
+
       demoUrl: "https://ui-templates-zeta.vercel.app/",
     },
     {
@@ -135,6 +143,8 @@ const ProjectsLayout: React.FC = () => {
       ],
       githubUrl: "https://github.com/ankitsinghmyself/travel-website",
       requiresMobileView: false,
+      isDownload: false,
+
       demoUrl: "https://travel-website-sample-ten.vercel.app/",
     },
     {
@@ -158,6 +168,8 @@ const ProjectsLayout: React.FC = () => {
       ],
       githubUrl: "https://github.com/ankitsinghmyself/react-weather-app",
       requiresMobileView: false,
+      isDownload: false,
+
       demoUrl: "https://react-weather-app-made-by-ankit.vercel.app/",
     },
     {
@@ -181,6 +193,8 @@ const ProjectsLayout: React.FC = () => {
       ],
       githubUrl: "https://github.com/ankitsinghmyself/React-Native-App-Covid19",
       requiresMobileView: false,
+      isDownload: false,
+
       demoUrl: "",
     },
     {
@@ -204,6 +218,7 @@ const ProjectsLayout: React.FC = () => {
       ],
       githubUrl: "",
       requiresMobileView: true,
+      isDownload: false,
       demoUrl: "https://games.abplive.com/",
     },
     {
@@ -223,6 +238,8 @@ const ProjectsLayout: React.FC = () => {
       ],
       githubUrl: "https://github.com/ankitsinghmyself/sample-portfolio1",
       requiresMobileView: false,
+      isDownload: false,
+
       demoUrl: "https://ankitsinghmyself1.vercel.app/",
     },
   ];
@@ -244,6 +261,7 @@ const ProjectsLayout: React.FC = () => {
       ],
       githubUrl: "https://github.com/ankitsinghmyself/chrome-plugins",
       requiresMobileView: false,
+      isDownload: false,
       demoUrl: "",
     },
   ];
