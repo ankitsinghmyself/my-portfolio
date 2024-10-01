@@ -43,6 +43,24 @@ const ProjectsLayout: React.FC = () => {
       demoUrl: "https://object-detection-lac-kappa.vercel.app/",
     },
     {
+      "title": "File Extractor App",
+      "description": "The File Extractor App allows users to efficiently copy and move files from deeply nested directory structures. Users can easily navigate through multiple layers of folders to select files for extraction. The app provides the flexibility to choose the destination folder for the extracted files, ensuring seamless organization and management of data. With a user-friendly Tkinter-based interface, it simplifies the file handling process for all users.",
+      "image": "/projects/imgFileExtractor.png",
+      "techstack": [
+        {
+          "label": "Python",
+          "color": "#306998"
+        },
+        {
+          "label": "Tkinter",
+          "color": "#0C4B33"
+        }
+      ],
+      "githubUrl": "https://github.com/ankitsinghmyself/file_extractor",
+      "requiresMobileView": false,
+      "demoUrl": "https://shorturl.at/aJwBu"
+    },    
+    {
       title: "eShop",
       description:
         "eShop is an e-commerce website with Admin panel that utilizes Redux, Prisma, Chart.js, and NextAuth with Google for enhanced functionality and user authentication.",
