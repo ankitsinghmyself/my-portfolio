@@ -47,7 +47,7 @@ const ProjectsLayout: React.FC = () => {
     {
       title: "File Extractor App",
       description:
-        "The File Extractor App allows users to efficiently copy and move files from deeply nested directory structures. Users can easily navigate through multiple layers of folders to select files for extraction. The app provides the flexibility to choose the destination folder for the extracted files, ensuring seamless organization and management of data. With a user-friendly Tkinter-based interface, it simplifies the file handling process for all users.",
+        "The File Extractor App allows users to copy and move files from deeply nested directory structures efficiently. Users can easily navigate through multiple layers of folders to select files for extraction. The app provides the flexibility to choose the destination folder for the extracted files, ensuring seamless organization and management of data. A user-friendly Tkinter-based interface simplifies the file-handling process for all users.",
       image: "/projects/imgFileExtractor.webp",
       techstack: [
         {
