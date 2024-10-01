@@ -101,7 +101,7 @@ const ProjectsLayout: React.FC = () => {
       title: "UI Templates",
       description:
         "A website template using React, Next.js, TypeScript, Chakra UI, and CSS, providing Developer-Friendly UI Templates for Instant Deployment.",
-      image: "/uiTemplates.png",
+      image: "/projects/uiTemplates.png",
       techstack: [
         {
           label: "NextJS",

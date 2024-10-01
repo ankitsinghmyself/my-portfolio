@@ -50,7 +50,7 @@ const Projects: React.FC<ProjectsProps> = ({ projects }) => {
                 style={{
                   aspectRatio: "1 / 1",
                   backgroundImage: `url(${project.image})`,
-                  backgroundSize: "contain",
+                  backgroundSize: "cover",
                   backgroundPosition: "center",
                   backgroundRepeat: "no-repeat",
                   cursor: "pointer",
