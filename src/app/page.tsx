@@ -1,6 +1,6 @@
 "use client";
 
-import ProjectsLayout from "@/components/comman/ProjectsLayout";
+import ProjectsLayout from "@/components/common/ProjectsLayout";
 import Intro from "@/components/Intro";
 import PageLayout from "@/components/PageLayout";
 import Projects from "@/components/Projects";

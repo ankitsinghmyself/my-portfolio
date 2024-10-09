@@ -1,7 +1,7 @@
 import React from "react";
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
-import SmallChip from "./comman/SmallChip";
-import { Project } from "./comman/ProjectsLayout";
+import SmallChip from "./common/SmallChip";
+import { Project } from "./common/ProjectsLayout";
 import { FaCloudDownloadAlt } from "react-icons/fa";
 
 interface ProjectsProps {

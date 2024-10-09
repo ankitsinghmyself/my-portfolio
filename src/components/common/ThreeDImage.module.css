@@ -1,0 +1,18 @@
+/* components/ThreeDImage.module.css */
+.threeDContainer {
+  perspective: 1000px; /* Creates a 3D perspective */
+  display: inline-block;
+  transition: transform 0.3s ease-in-out;
+  overflow: hidden;
+  border-radius: 10px; /* Optional: adds rounded corners */
+}
+
+.threeDImage {
+  transition: transform 0.3s ease-in-out; /* Smooth transition */
+  transform: rotateX(0deg) rotateY(0deg) scale(1); /* Default position and scale */
+  transform-origin: top;
+}
+
+.hovered .threeDImage {
+  transform: rotateX(10deg) rotateY(10deg) scale(1.2); /* Add zoom (scale) and slight 3D rotation */
+}

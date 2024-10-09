@@ -1,7 +1,7 @@
 "use client";
 
-import CustomButton from "@/components/comman/CustomButton";
-import ExternalSite from "@/components/comman/ExternalSite";
+import CustomButton from "@/components/common/CustomButton";
+import ExternalSite from "@/components/common/ExternalSite";
 import Intro from "@/components/Intro";
 import PageLayout from "@/components/PageLayout";
 import Projects from "@/components/Projects";

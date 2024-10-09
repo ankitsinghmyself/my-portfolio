@@ -1,5 +1,5 @@
 "use client";
-import LargeChip from "@/components/comman/LargeChip";
+import LargeChip from "@/components/common/LargeChip";
 import Intro from "@/components/Intro";
 import PageLayout from "@/components/PageLayout";
 import React from "react";

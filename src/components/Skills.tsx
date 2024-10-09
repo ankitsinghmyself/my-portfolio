@@ -1,5 +1,5 @@
 import React from "react";
-import CustomChip from "./comman/LargeChip";
+import CustomChip from "./common/LargeChip";
 
 
 
