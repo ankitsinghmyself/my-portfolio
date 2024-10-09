@@ -1,5 +1,6 @@
 "use client";
 
+import CustomCursor from "@/components/common/CustomCursor";
 import ProjectsLayout from "@/components/common/ProjectsLayout";
 import Intro from "@/components/Intro";
 import PageLayout from "@/components/PageLayout";
@@ -16,6 +17,7 @@ export default function Home() {
         <Intro />
         <Skills />
         <ProjectsLayout />
+        <CustomCursor />
       </PageLayout>
     </>
   );

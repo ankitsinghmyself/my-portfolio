@@ -33,19 +33,18 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
       icon: VscGithub,
       type: "external",
     },
-    {
-      label: "Stack overflow",
-      href: "https://stackoverflow.com/users/11166949/ankit-singh",
-      icon: FaStackOverflow,
-      type: "external",
-    },
+    // {
+    //   label: "Stack overflow",
+    //   href: "https://stackoverflow.com/users/11166949/ankit-singh",
+    //   icon: FaStackOverflow,
+    //   type: "external",
+    // },
     {
       label: "About Me",
       href: "/about",
       icon: LiaUserGraduateSolid,
       type: "internal",
     },
-  
   ];
 
   return (
