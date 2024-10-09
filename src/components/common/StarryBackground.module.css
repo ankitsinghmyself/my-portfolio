@@ -1,0 +1,28 @@
+/* StarryBackground.module.css */
+.stars {
+    position: fixed; /* Ensure stars are fixed in place */
+    top: 0;
+    left: 0;
+    width: 100vw; /* Full width */
+    height: 100vh; /* Full height */
+    overflow: hidden; /* Prevent scrolling */
+    z-index: 100; /* Position behind other content */
+    pointer-events: none;
+  }
+  
+  .star {
+    position: absolute;
+    background-color: white; /* Star color */
+    border-radius: 50%; /* Make stars circular */
+    animation: twinkle 1.5s infinite alternate; /* Optional twinkling effect */
+  }
+  
+  @keyframes twinkle {
+    0% {
+      opacity: 0.8;
+    }
+    100% {
+      opacity: 0.2;
+    }
+  }
+  

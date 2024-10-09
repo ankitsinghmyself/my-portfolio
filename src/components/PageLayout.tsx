@@ -2,7 +2,9 @@
 import React, { useState } from "react";
 import Sidebar from "./Layout/Sidebar";
 import CustomCursor from "./common/CustomCursor";
-
+import StarryBackground from "./common/StarryBackground";
+import useStarryBackground from "@/hooks/useStarryBackground";
+import "./common/StarryBackground.module.css";
 interface PageLayoutProps {
   title: string;
   children: React.ReactNode;
@@ -15,7 +17,7 @@ const PageLayout: React.FC<PageLayoutProps> = ({
   actions,
 }) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-
+  useStarryBackground(400);
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
@@ -63,7 +65,7 @@ const PageLayout: React.FC<PageLayoutProps> = ({
         </div> */}
         <div>{children}</div>
         <CustomCursor />
-
+        <StarryBackground />
       </div>
     </div>
   );
