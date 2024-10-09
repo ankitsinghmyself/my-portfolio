@@ -3,7 +3,7 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { MdClose, MdHome } from "react-icons/md";
 import { VscGithub } from "react-icons/vsc";
-import { FaStackOverflow } from "react-icons/fa";
+import { FaExternalLinkAlt, FaStackOverflow } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { LiaUserGraduateSolid } from "react-icons/lia";
 import { FcWorkflow } from "react-icons/fc";
@@ -68,10 +68,12 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
             <Link
               href={link.href}
               target={link.type === "external" ? "_blank" : ""}
-              className="flex"
+              className="flex items-center"
             >
               {link.icon && <link.icon className="inline mr-2 text-3xl" />}
               <p className="mt-1 ml-2">{link.label}</p>
+              {link.type === "external" && <FaExternalLinkAlt className="inline text-xs ml-2" />}
+
             </Link>
           </motion.button>
         ))}
