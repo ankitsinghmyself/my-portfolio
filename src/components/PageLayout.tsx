@@ -5,6 +5,7 @@ import CustomCursor from "./common/CustomCursor";
 import StarryBackground from "./common/StarryBackground";
 import useStarryBackground from "@/hooks/useStarryBackground";
 import "./common/StarryBackground.module.css";
+import Footer from "./common/Footer";
 interface PageLayoutProps {
   title: string;
   children: React.ReactNode;
@@ -66,6 +67,7 @@ const PageLayout: React.FC<PageLayoutProps> = ({
         <div>{children}</div>
         <CustomCursor />
         <StarryBackground />
+        <Footer/>
       </div>
     </div>
   );
