@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Sidebar from "./Layout/Sidebar";
+import CustomCursor from "./common/CustomCursor";
 
 interface PageLayoutProps {
   title: string;
@@ -61,6 +62,8 @@ const PageLayout: React.FC<PageLayoutProps> = ({
           </button>
         </div> */}
         <div>{children}</div>
+        <CustomCursor />
+
       </div>
     </div>
   );

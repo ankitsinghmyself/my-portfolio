@@ -17,7 +17,6 @@ export default function Home() {
         <Intro />
         <Skills />
         <ProjectsLayout />
-        <CustomCursor />
       </PageLayout>
     </>
   );

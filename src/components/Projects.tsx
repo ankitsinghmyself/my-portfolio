@@ -78,7 +78,7 @@ const Projects: React.FC<ProjectsProps> = ({ projects }) => {
                         <span className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-max px-2 py-1 text-xs text-white bg-gray-700 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                           {project.isDownload
                             ? "Download"
-                            : "External Link"}
+                            : "Link"}
                         </span>
                       </button>
                     )}
