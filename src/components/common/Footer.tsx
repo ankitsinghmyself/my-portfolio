@@ -3,10 +3,10 @@ import { MdEmail } from "react-icons/md";
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-gray-900 text-white py-4">
+    <footer className="bg-gray-900 w-full text-white py-4">
       <div className="container mx-auto px-4 text-center">
-        <p className="text-sm mb-2 flex items-center justify-center">
-          <MdEmail className="mr-2 text-lg" /> {/* Added text-lg for better visibility */}
+        <p className="text-sm mb-2">
+          <MdEmail className="inline mr-2" />
           <a
             href="mailto:ankitsinghmyself@gmail.com"
             className="hover:text-gray-400"
