@@ -26,7 +26,6 @@ const PageLayout: React.FC<PageLayoutProps> = ({
  
   return (
     <motion.div
-      className="flex flex-col lg:flex-row min-h-screen"
       initial={{ opacity: 0, y: 20 }} // Initial state for animation
       animate={{ opacity: 1, y: 0 }} // Animation when the component is rendered
       exit={{ opacity: 0, y: 20 }} // Animation when the component is removed

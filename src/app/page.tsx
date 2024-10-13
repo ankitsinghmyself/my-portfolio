@@ -1,6 +1,5 @@
 "use client";
 
-import CustomCursor from "@/components/common/CustomCursor";
 import ProjectsLayout from "@/components/Layout/ProjectsLayout";
 import Intro from "@/components/Intro";
 import PageLayout from "@/components/PageLayout";

@@ -44,7 +44,7 @@ const SidebarList = [
   {
     label: "Resume",
     href: "https://drive.google.com/file/d/1cXjUkPhHm7zFPj0dfIUEFkJ1zwCbPW3-/view?usp=sharing",
-    icon: GoWorkflow ,
+    icon: GoWorkflow,
     type: "external",
   },
   {
@@ -73,15 +73,15 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
       <h1 className="text-2xl font-bold mb-4">Ankit Singh</h1>
       <ul>
         {links.map((link, index) => (
-          <motion.button
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
+          <Link
+            href={link.href}
             key={index}
+            target={link.type === "external" ? "_blank" : ""}
             className="flex w-full items-center justify-between mb-5 px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg shadow-md hover:bg-gray-700 transition duration-300 ease-in-out"
           >
-            <Link
-              href={link.href}
-              target={link.type === "external" ? "_blank" : ""}
+            <motion.button
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
               className="flex items-center"
             >
               {link.icon && <link.icon className="inline mr-2 text-3xl" />}
@@ -89,8 +89,8 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
               {link.type === "external" && (
                 <FaExternalLinkAlt className="inline text-xs ml-2" />
               )}
-            </Link>
-          </motion.button>
+            </motion.button>
+          </Link>
         ))}
       </ul>
     </div>

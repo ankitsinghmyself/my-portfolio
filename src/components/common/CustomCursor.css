@@ -1,0 +1,20 @@
+/* CustomCursor.css */
+@keyframes ring {
+    0% {
+      width: 30px;
+      height: 30px;
+      opacity: 1;
+    }
+    100% {
+      width: 300px;
+      height: 300px;
+      opacity: 0;
+    }
+  }
+  
+  .ring {
+    border: 2px solid rgba(244, 248, 248, 0.8); /* Ring color */
+    border-radius: 50%; /* Circle shape */
+    animation: ring 0.5s forwards; /* Apply the animation */
+  }
+  

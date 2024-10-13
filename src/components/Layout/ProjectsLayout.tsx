@@ -298,6 +298,7 @@ const ProjectsLayout: React.FC = () => {
       demoUrl: "",
     },
   ];
+  
   return (
     <div className="py-5 md:py-5">
       <div className="flex space-x-4 mb-4">
