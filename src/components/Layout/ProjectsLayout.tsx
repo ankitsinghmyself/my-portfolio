@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import Projects from "../Projects";
-import CustomButton from "./CustomButton";
 import { FaProjectDiagram } from "react-icons/fa";
 import { BsPlugin } from "react-icons/bs";
+import CustomButton from "../common/CustomButton";
 export interface Project {
   title: string;
   description: string;
@@ -20,6 +20,35 @@ export interface TechStack {
 const ProjectsLayout: React.FC = () => {
   const [activeTab, setActiveTab] = useState<string>("tab1");
   const projects: Project[] = [
+    {
+      title: "Book Management System REST API",
+      description:
+        "A Spring Boot-based REST API for managing books, built with MongoDB as the database. The API provides endpoints to perform CRUD operations (Create, Read, Update, Delete) and allows searching books by title and author. It leverages DTOs for efficient data handling and follows RESTful principles.",
+      image: "/projects/imgBookManagementRestApi.webp",
+      techstack: [
+        {
+          label: "Java",
+          color: "#ff3344",
+        },
+        {
+          label: "Spring Boot",
+          color: "#6DB33F",
+        },
+        {
+          label: "MongoDB",
+          color: "#306998",
+        },
+        {
+          label: "JUnit",
+          color: "#25A162",
+        }
+      ],
+      githubUrl: "https://github.com/ankitsinghmyself/bookManagementSystem",
+      requiresMobileView: false,
+      isDownload: false,
+      demoUrl: '', // Since it's a REST API, no live demo unless you host the API
+    }
+    ,    
     {
       title: "AI Object Detection App",
       description:

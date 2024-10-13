@@ -1,14 +1,19 @@
 import React from "react";
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 import SmallChip from "./common/SmallChip";
-import { Project } from "./common/ProjectsLayout";
+import { Project } from "./Layout/ProjectsLayout";
 import { FaCloudDownloadAlt } from "react-icons/fa";
+import { motion, useScroll, useTransform } from "framer-motion"; // Import necessary hooks from Framer Motion
 
 interface ProjectsProps {
   projects: Project[]; // Array of Project objects
 }
 
 const Projects: React.FC<ProjectsProps> = ({ projects }) => {
+  const { scrollYProgress } = useScroll(); // Get the scroll progress
+  const opacity = useTransform(scrollYProgress, [0, 0.5], [0, 1]); // Transform opacity based on scroll position
+  const translateY = useTransform(scrollYProgress, [0, 0.5], [20, 0]); // Transform Y position based on scroll
+
   const openInMobileView = (url: string) => {
     const width = 375; // Width of an iPhone X
     const height = 667; // Height of an iPhone X
@@ -26,16 +31,21 @@ const Projects: React.FC<ProjectsProps> = ({ projects }) => {
       window.open(url, "_blank", "noopener,noreferrer");
     }
   };
+
   return (
-    <div className="">
-      <div className=" grid grid-cols-1 md:grid-cols-4 gap-4">
+    <div>
+      <motion.div 
+        className="grid grid-cols-1 md:grid-cols-4 gap-4"
+        style={{ opacity, translateY }} // Apply scroll-based styles
+      >
         {projects.map((project, index) => (
-          <div
+          <motion.div
             key={index}
             style={{
               height: "300px",
-              backgroundColor: "rgb(31 41 55 / var(--tw-bg-opacity)",
+              backgroundColor: "rgb(31 41 55 / var(--tw-bg-opacity))",
               borderRadius: "12px",
+              translateY: translateY, // Ensure translateY applies to individual items
             }}
           >
             <div className="rounded-t-md overflow-hidden relative">
@@ -58,7 +68,7 @@ const Projects: React.FC<ProjectsProps> = ({ projects }) => {
               />
               <div className="p-5 bg-gray-800 rounded-b-md overflow-hidden">
                 <div className="flex items-baseline justify-between">
-                  <h5 className="mb-2 text-md font-bold ">{project.title}</h5>
+                  <h5 className="mb-2 text-md font-bold">{project.title}</h5>
                   <div className="flex items-center justify-between">
                     {project.demoUrl && (
                       <button
@@ -76,9 +86,7 @@ const Projects: React.FC<ProjectsProps> = ({ projects }) => {
                           <FaExternalLinkAlt />
                         )}
                         <span className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-max px-2 py-1 text-xs text-white bg-gray-700 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                          {project.isDownload
-                            ? "Download"
-                            : "Link"}
+                          {project.isDownload ? "Download" : "Link"}
                         </span>
                       </button>
                     )}
@@ -91,13 +99,10 @@ const Projects: React.FC<ProjectsProps> = ({ projects }) => {
                       >
                         <FaGithub />
                         <span className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-max px-2 py-1 text-xs text-white bg-gray-700 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                          {project.githubUrl
-                            ? "Github"
-                            : ""}
+                          Github
                         </span>
                       </a>
                     )}
-                     
                   </div>
                 </div>
 
@@ -110,14 +115,14 @@ const Projects: React.FC<ProjectsProps> = ({ projects }) => {
                     />
                   ))}
                 </div>
-                <p className="text-xs font-normal  text-justify line-clamp-3">
+                <p className="text-xs font-normal text-justify line-clamp-3">
                   {project.description}
                 </p>
               </div>
             </div>
-          </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 };

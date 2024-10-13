@@ -6,50 +6,64 @@ import { VscGithub } from "react-icons/vsc";
 import { FaExternalLinkAlt, FaStackOverflow } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { LiaUserGraduateSolid } from "react-icons/lia";
-import { FcWorkflow } from "react-icons/fc";
+import { GoWorkflow } from "react-icons/go";
 import { MdWorkOutline } from "react-icons/md";
+import { SiLinkedin } from "react-icons/si";
 
 interface SidebarProps {
   isOpen: boolean;
   toggleSidebar: () => void;
 }
 
+const SidebarList = [
+  { label: "Home", href: "/", icon: MdHome, type: "internal" },
+  {
+    label: "Experience",
+    href: "/experience",
+    icon: MdWorkOutline,
+    type: "internal",
+  },
+  {
+    label: "GitHub",
+    href: "https://github.com/ankitsinghmyself",
+    icon: VscGithub,
+    type: "external",
+  },
+  // {
+  //   label: "Stack overflow",
+  //   href: "https://stackoverflow.com/users/11166949/ankit-singh",
+  //   icon: FaStackOverflow,
+  //   type: "external",
+  // },
+  {
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/in/ankitsinghmyself/",
+    icon: SiLinkedin,
+    type: "external",
+  },
+  {
+    label: "Resume",
+    href: "https://drive.google.com/file/d/1cXjUkPhHm7zFPj0dfIUEFkJ1zwCbPW3-/view?usp=sharing",
+    icon: GoWorkflow ,
+    type: "external",
+  },
+  {
+    label: "About Me",
+    href: "/about",
+    icon: LiaUserGraduateSolid,
+    type: "internal",
+  },
+];
+
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
   const sidebarClass = `bg-gray-900  text-gray-300 w-[80%] md:w-64  p-4 fixed top-0 left-0 h-full z-50 overflow-y-auto transition-transform duration-300 transform ${
     isOpen ? "translate-x-0" : "-translate-x-full md:translate-x-0"
   }`;
 
-  const links = [
-    { label: "Home", href: "/", icon: MdHome, type: "internal" },
-    {
-      label: "Experience",
-      href: "/experience",
-      icon: MdWorkOutline,
-      type: "internal",
-    },
-    {
-      label: "GitHub",
-      href: "https://github.com/ankitsinghmyself",
-      icon: VscGithub,
-      type: "external",
-    },
-    // {
-    //   label: "Stack overflow",
-    //   href: "https://stackoverflow.com/users/11166949/ankit-singh",
-    //   icon: FaStackOverflow,
-    //   type: "external",
-    // },
-    {
-      label: "About Me",
-      href: "/about",
-      icon: LiaUserGraduateSolid,
-      type: "internal",
-    },
-  ];
+  const links = SidebarList;
 
   return (
     <div className={sidebarClass}>
-      {/* Your sidebar content goes here */}
       <button
         onClick={toggleSidebar}
         className="text-gray-300 p-2 focus:outline-none md:hidden"
@@ -72,8 +86,9 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
             >
               {link.icon && <link.icon className="inline mr-2 text-3xl" />}
               <p className="mt-1 ml-2">{link.label}</p>
-              {link.type === "external" && <FaExternalLinkAlt className="inline text-xs ml-2" />}
-
+              {link.type === "external" && (
+                <FaExternalLinkAlt className="inline text-xs ml-2" />
+              )}
             </Link>
           </motion.button>
         ))}

@@ -1,31 +1,56 @@
 import React from "react";
 import CustomChip from "./common/LargeChip";
+import { motion } from "framer-motion";
 
+// Animation Variants for Framer Motion
+const containerVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: "spring",
+      stiffness: 50,
+      staggerChildren: 0.2,
+    },
+  },
+};
 
-
+const chipVariants = {
+  hidden: { opacity: 0, scale: 0.9 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: { type: "spring", stiffness: 50 },
+  },
+};
 
 interface SkillCategoryProps {
   title: string;
   chips: { label: string; color: string }[];
 }
 
+// Wrap SkillCategory with motion for animation
 const SkillCategory: React.FC<SkillCategoryProps> = ({ title, chips }) => (
-  <div className="max-w-md w-full bg-gray-800 rounded-md shadow dark:border-gray-700">
-    <div
-      style={{
-        padding: "1.25rem 0 1.25rem  1.25rem  ",
-      }}
-    >
+  <motion.div
+    className="max-w-md w-full bg-gray-800 rounded-md shadow dark:border-gray-700"
+    variants={containerVariants}
+    initial="hidden"
+    animate="visible"
+  >
+    <div style={{ padding: "1.25rem" }}>
       <h5 className="mb-2 text-lg font-medium tracking-tight text-white">
         {title}
       </h5>
       <div className="flex flex-wrap">
         {chips.map((skill, index) => (
-          <CustomChip key={index} label={skill.label} color={skill.color} />
+          <motion.div key={index} variants={chipVariants}>
+            <CustomChip label={skill.label} color={skill.color} />
+          </motion.div>
         ))}
       </div>
     </div>
-  </div>
+  </motion.div>
 );
 
 const Skills: React.FC = () => {
@@ -60,9 +85,15 @@ const Skills: React.FC = () => {
 
   return (
     <div className="py-5 md:py-5 grid grid-cols-1 gap-4">
-      <p className="text-white text-2xl font-bold">What I know</p>
-
-      <div className=" grid grid-cols-1 md:grid-cols-4 gap-4">
+      <motion.div
+        className="max-w-md w-full"
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+      >
+        <p className="text-white text-2xl font-bold">What I know</p>
+      </motion.div>
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
         {frontendSkills && (
           <SkillCategory title="Frontend" chips={frontendSkills} />
         )}
@@ -72,7 +103,7 @@ const Skills: React.FC = () => {
         {databaseSkills && (
           <SkillCategory title="Database" chips={databaseSkills} />
         )}
-        {devopsSkills && <SkillCategory title="Devops" chips={devopsSkills} />}
+        {devopsSkills && <SkillCategory title="DevOps" chips={devopsSkills} />}
       </div>
     </div>
   );
