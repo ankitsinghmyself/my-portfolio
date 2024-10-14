@@ -21,7 +21,42 @@ const ProjectsLayout: React.FC = () => {
   const [activeTab, setActiveTab] = useState<string>("tab1");
   const projects: Project[] = [
     {
-      title: "Book Management System REST API",
+      title: "House Maintenance Tracker",
+      description:
+        "A web application that helps house owners manage their maintenance payments and track expenditures made by the society association. The application allows users to register, log in, make payments, and track expenditures in an organized manner.",
+      image: "/projects/imgHouseMaintenanceTracker.webp",
+      techstack: [
+       
+        {
+          label: "TS",
+          color: "#007ACC",
+        },
+        
+        {
+          label: "Node.js",
+          color: "#8CC84B",
+        },
+        {
+          label: "Express",
+          color: "#000000",
+        },
+        {
+          label: "MongoDB",
+          color: "#47A248",
+        },
+        {
+          label: "JWT",
+          color: "#F7DF1E",
+        },
+      ],
+      githubUrl:
+        "https://github.com/ankitsinghmyself/house-maintenance-tracker",
+      requiresMobileView: false,
+      isDownload: false,
+      demoUrl: "",
+    },
+    {
+      title: "Book Management System",
       description:
         "A Spring Boot-based REST API for managing books, built with MongoDB as the database. The API provides endpoints to perform CRUD operations (Create, Read, Update, Delete) and allows searching books by title and author. It leverages DTOs for efficient data handling and follows RESTful principles.",
       image: "/projects/imgBookManagementRestApi.webp",
@@ -41,14 +76,13 @@ const ProjectsLayout: React.FC = () => {
         {
           label: "JUnit",
           color: "#25A162",
-        }
+        },
       ],
       githubUrl: "https://github.com/ankitsinghmyself/bookManagementSystem",
       requiresMobileView: false,
       isDownload: false,
-      demoUrl: '', // Since it's a REST API, no live demo unless you host the API
-    }
-    ,    
+      demoUrl: "", // Since it's a REST API, no live demo unless you host the API
+    },
     {
       title: "AI Object Detection App",
       description:
@@ -298,7 +332,7 @@ const ProjectsLayout: React.FC = () => {
       demoUrl: "",
     },
   ];
-  
+
   return (
     <div className="py-5 md:py-5">
       <div className="flex space-x-4 mb-4">
