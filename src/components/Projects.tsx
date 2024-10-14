@@ -1,12 +1,12 @@
 import React from "react";
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 import SmallChip from "./common/SmallChip";
-import { Project } from "./Layout/ProjectsLayout";
 import { FaCloudDownloadAlt } from "react-icons/fa";
 import { motion, useScroll, useTransform } from "framer-motion"; // Import necessary hooks from Framer Motion
+import { Project } from "./Layout/types";
 
 interface ProjectsProps {
-  projects: Project[]; // Array of Project objects
+  projects: Project[]; 
 }
 
 const Projects: React.FC<ProjectsProps> = ({ projects }) => {
@@ -56,7 +56,7 @@ const Projects: React.FC<ProjectsProps> = ({ projects }) => {
                     project.requiresMobileView
                   )
                 }
-                className="opacity-95 w-full h-40 bg-gray-700"
+                className="opacity-95 w-full h-40 bg-gray-700 border-2 border-gray-400 rounded-md"
                 style={{
                   aspectRatio: "1 / 1",
                   backgroundImage: `url(${project.image})`,
