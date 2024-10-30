@@ -1,59 +1,15 @@
 "use client";
 import Link from "next/link";
 import React, { useState } from "react";
-import { MdClose, MdHome } from "react-icons/md";
-import { VscGithub } from "react-icons/vsc";
+import { MdClose } from "react-icons/md";
 import { FaExternalLinkAlt, FaStackOverflow } from "react-icons/fa";
 import { motion } from "framer-motion";
-import { LiaUserGraduateSolid } from "react-icons/lia";
-import { GoWorkflow } from "react-icons/go";
-import { MdWorkOutline } from "react-icons/md";
-import { SiLinkedin } from "react-icons/si";
+import { SidebarList } from "./SidebarList";
 
 interface SidebarProps {
   isOpen: boolean;
   toggleSidebar: () => void;
 }
-
-const SidebarList = [
-  { label: "Home", href: "/", icon: MdHome, type: "internal" },
-  {
-    label: "Experience",
-    href: "/experience",
-    icon: MdWorkOutline,
-    type: "internal",
-  },
-  {
-    label: "GitHub",
-    href: "https://github.com/ankitsinghmyself",
-    icon: VscGithub,
-    type: "external",
-  },
-  // {
-  //   label: "Stack overflow",
-  //   href: "https://stackoverflow.com/users/11166949/ankit-singh",
-  //   icon: FaStackOverflow,
-  //   type: "external",
-  // },
-  {
-    label: "LinkedIn",
-    href: "https://www.linkedin.com/in/ankitsinghmyself/",
-    icon: SiLinkedin,
-    type: "external",
-  },
-  {
-    label: "Resume",
-    href: "https://drive.google.com/file/d/1cXjUkPhHm7zFPj0dfIUEFkJ1zwCbPW3-/view?usp=sharing",
-    icon: GoWorkflow,
-    type: "external",
-  },
-  {
-    label: "About Me",
-    href: "/about",
-    icon: LiaUserGraduateSolid,
-    type: "internal",
-  },
-];
 
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
   const sidebarClass = `bg-gray-900  text-gray-300 w-[80%] md:w-64  p-4 fixed top-0 left-0 h-full z-50 overflow-y-auto transition-transform duration-300 transform ${

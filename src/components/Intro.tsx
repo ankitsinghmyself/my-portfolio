@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useMemo} from "react";
 import ThreeDImage from "./common/ThreeDImage";
 import { motion } from "framer-motion";
 
@@ -22,7 +22,7 @@ const itemVariants = {
   visible: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 50 } },
 };
 
-const Intro: React.FC = () => {
+const Intro: React.FC = React.memo(() => {
   return (
     <motion.div
       className="p-5 md:px-10 flex flex-col md:flex-row items-center justify-between bg-gradient-to-r from-gray-500 to-red-500 rounded-md"
@@ -75,6 +75,6 @@ const Intro: React.FC = () => {
       </motion.div>
     </motion.div>
   );
-};
+});
 
 export default Intro;

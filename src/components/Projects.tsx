@@ -36,7 +36,7 @@ const Projects: React.FC<ProjectsProps> = ({ projects }) => {
     <div>
       <motion.div 
         className="grid grid-cols-1 md:grid-cols-4 gap-4"
-        style={{ opacity, translateY }} // Apply scroll-based styles
+        // style={{ opacity, translateY }} // Apply scroll-based styles
       >
         {projects.map((project, index) => (
           <motion.div

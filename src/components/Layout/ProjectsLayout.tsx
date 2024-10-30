@@ -1,14 +1,15 @@
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 import Projects from "../Projects";
 import { FaProjectDiagram } from "react-icons/fa";
 import { BsPlugin } from "react-icons/bs";
 import CustomButton from "../common/CustomButton";
-import { projects } from "./data/Projects";
-import { plugins } from "./data/Plugins";
+import { projects as projectsData } from "./data/Projects";
+import { plugins as pluginsData } from "./data/Plugins";
 
 const ProjectsLayout: React.FC = () => {
   const [activeTab, setActiveTab] = useState<string>("tab1");
-
+  const projects = useMemo(() => projectsData, []);
+  const plugins = useMemo(() => pluginsData, []);
   return (
     <div className="py-5 md:py-5">
       <div className="flex space-x-4 mb-4">
