@@ -8,35 +8,17 @@ import { GrProjects } from "react-icons/gr";
 
 export const SidebarList = [
   { label: "Home", href: "/", icon: MdHome, type: "internal" },
-  {
-    label: "Projects",
-    href: "/projects",
-    icon: GrProjects,
-    type: "internal",
-  },
+  // {
+  //   label: "Projects",
+  //   href: "/projects",
+  //   icon: GrProjects,
+  //   type: "internal",
+  // },
   {
     label: "Experience",
     href: "/experience",
     icon: MdWorkOutline,
     type: "internal",
-  },
-  {
-    label: "GitHub",
-    href: "https://github.com/ankitsinghmyself",
-    icon: VscGithub,
-    type: "external",
-  },
-  // {
-  //   label: "Stack overflow",
-  //   href: "https://stackoverflow.com/users/11166949/ankit-singh",
-  //   icon: FaStackOverflow,
-  //   type: "external",
-  // },
-  {
-    label: "LinkedIn",
-    href: "https://www.linkedin.com/in/ankitsinghmyself/",
-    icon: SiLinkedin,
-    type: "external",
   },
   {
     label: "Resume",

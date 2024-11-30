@@ -48,6 +48,88 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
             </motion.button>
           </Link>
         ))}
+        <a
+          style={{
+            color: "black",
+            width: "100%",
+            padding: "25px 20px",
+            borderRadius: "5px",
+            border: "1px solid #ccc",
+            marginTop: "20px",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            backgroundImage:
+              "url('https://hrcdn.net/fcore/assets/brand/logo-new-white-green-a5cb16e0ae.svg')",
+            backgroundSize: "150px 50px",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+          }}
+          href="https://www.hackerrank.com/profile/ankitsinghmyself"
+          target="_blank"
+        ></a>
+          <a
+          style={{
+            color: "black",
+            width: "100%",
+            padding: "25px 20px",
+            borderRadius: "5px",
+            border: "1px solid #ccc",
+            marginTop: "20px",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            backgroundImage:
+              "url('https://content.linkedin.com/content/dam/brand/site/img/logo/logo-hero.png')",
+            backgroundSize: "100% 50px",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+          }}
+          href="https://www.linkedin.com/in/ankitsinghmyself/"
+          target="_blank"
+        ></a>
+         <a
+          style={{
+            color: "black",
+            width: "100%",
+            padding: "25px 20px",
+            borderRadius: "5px",
+            border: "1px solid #ccc",
+            marginTop: "20px",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            backgroundColor: '#fff',
+            backgroundImage:
+              "url('https://pngimg.com/uploads/github/github_PNG15.png')",
+            backgroundSize: "150px 50px",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+          }}
+          href="https://github.com/ankitsinghmyself"
+          target="_blank"
+        ></a>
+         {/* <a
+          style={{
+            color: "black",
+            width: "100%",
+            padding: "25px 20px",
+            borderRadius: "5px",
+            border: "1px solid #ccc",
+            marginTop: "20px",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            backgroundColor: '#fff',
+            backgroundImage:
+              "url('https://freepngimg.com/thumb/resume/1-2-resume-png-picture.png')",
+            backgroundSize: "225px 60px",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+          }}
+          href="https://github.com/ankitsinghmyself"
+          target="_blank"
+        ></a> */}
       </ul>
     </div>
   );

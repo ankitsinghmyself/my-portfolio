@@ -35,6 +35,7 @@ export default function Home() {
         <PageLayout title="Dashboard">
           <Intro />
           <Skills />
+          <ProjectsLayout />
         </PageLayout>
       </motion.div>
     </>
