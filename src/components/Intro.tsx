@@ -77,4 +77,5 @@ const Intro: React.FC = React.memo(() => {
   );
 });
 
+Intro.displayName = 'Intro';
 export default Intro;
