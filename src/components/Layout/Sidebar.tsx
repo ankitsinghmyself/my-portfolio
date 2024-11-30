@@ -80,13 +80,14 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
             justifyContent: "center",
             alignItems: "center",
             backgroundImage:
-              "url('https://content.linkedin.com/content/dam/brand/site/img/logo/logo-hero.png')",
-            backgroundSize: "100% 50px",
+              "url('https://freelogopng.com/images/all_img/1656997167linkedin-logo-white.png')",
+            backgroundSize: "150px 30px",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
           }}
           href="https://www.linkedin.com/in/ankitsinghmyself/"
           target="_blank"
+          
         ></a>
          <a
           style={{
@@ -99,10 +100,9 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            backgroundColor: '#fff',
             backgroundImage:
-              "url('https://pngimg.com/uploads/github/github_PNG15.png')",
-            backgroundSize: "150px 50px",
+              "url('https://www.logo.wine/a/logo/GitHub/GitHub-Wordmark-White-Dark-Background-Logo.wine.svg')",
+            backgroundSize: "150px 30px",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
           }}
