@@ -270,6 +270,54 @@ export const projects: Project[] = [
       demoUrl: "https://games.abplive.com/",
     },
     {
+      title: "Profit180",
+      description:
+        "A website that provides trending and losing U.S. stock market prices, along with the latest trading news.",
+      image: "/projects/profit180.png",
+      techstack: [
+        {
+          label: "HTML5",
+          color: "#00D0B8",
+        },
+        {
+          label: "Javascript",
+          color: "#007ACC",
+        },
+        {
+          label: "cPanel",
+          color: "#00B809",
+        },
+      ],
+      githubUrl: "",
+      requiresMobileView: false,
+      isDownload: false,
+      demoUrl: "https://profit180.com/",
+    },
+    {
+      title: "Masti dance academy",
+      description:
+        "Developed and maintained the Masti Dance Academy website using HTML, JavaScript, and PHP for a seamless user experience.",
+      image: "/projects/profit180.png",
+      techstack: [
+        {
+          label: "HTML5",
+          color: "#00D0B8",
+        },
+        {
+          label: "Javascript",
+          color: "#007ACC",
+        },
+        {
+          label: "cPanel",
+          color: "#00B809",
+        },
+      ],
+      githubUrl: "",
+      requiresMobileView: false,
+      isDownload: false,
+      demoUrl: "https://mastidanceacademy.com/",
+    },
+    {
       title: "Portfolio Showcase",
       description:
         "A portfolio website built with Next.js and Sanity.io, showcasing sample projects and work.",
