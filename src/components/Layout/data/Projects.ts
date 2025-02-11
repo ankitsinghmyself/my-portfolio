@@ -297,7 +297,7 @@ export const projects: Project[] = [
       title: "Masti dance academy",
       description:
         "Developed and maintained the Masti Dance Academy website using HTML, JavaScript, and PHP for a seamless user experience.",
-      image: "/projects/profit180.png",
+      image: "/projects/masti.png",
       techstack: [
         {
           label: "HTML5",

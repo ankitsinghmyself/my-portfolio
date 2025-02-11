@@ -1,82 +1,126 @@
 import React, { useEffect, useState } from "react";
-import './CustomCursor.css'; // Import the CSS file for keyframes
+import "./CustomCursor.css"; // Ensure this CSS file exists
 
-const CustomCursor = () => {
-  const [position, setPosition] = useState({ x: 0, y: 0 });
-  const [isHovering, setIsHovering] = useState(false);
-  const [animationKey, setAnimationKey] = useState(0); // To trigger the animation
+// Define types
+interface Position {
+  x: number;
+  y: number;
+}
+
+interface Star {
+  id: number;
+  x: number;
+  y: number;
+  size: number;
+  opacity: number;
+}
+
+interface Explosion {
+  id: number;
+  x: number;
+  y: number;
+}
+
+const CustomCursor: React.FC = () => {
+  const [position, setPosition] = useState<Position>({ x: 0, y: 0 });
+  const [isHovering, setIsHovering] = useState<boolean>(false);
+  const [stars, setStars] = useState<Star[]>([]);
+  const [explosions, setExplosions] = useState<Explosion[]>([]);
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
-      setPosition({
-        x: e.clientX + window.scrollX, // Adjust for horizontal scroll
-        y: e.clientY + window.scrollY, // Adjust for vertical scroll
-      });
+      setPosition({ x: e.clientX + window.scrollX, y: e.clientY + window.scrollY });
 
       const targetElement = e.target as HTMLElement;
-
-      // Check if the target element is interactive
       const isInteractive =
-        targetElement.tagName === "A" ||
-        targetElement.tagName === "BUTTON" ||
-        targetElement.tagName === "SVG" ||
+        ["A", "BUTTON", "SVG"].includes(targetElement.tagName) ||
         targetElement.classList.contains("btnC") ||
         targetElement.classList.contains("chipC") ||
-        window.getComputedStyle(targetElement).cursor === "pointer"; // Check if the cursor style is 'pointer'
+        window.getComputedStyle(targetElement).cursor === "pointer";
 
       setIsHovering(isInteractive);
+      document.body.style.backgroundColor = isInteractive ? "#111" : "#000";
 
-      // Change body background color based on hover state
-      document.body.style.backgroundColor = isInteractive ? "white" : "black";
+      // Add a glowing particle effect (small sparks on mouse move)
+      const newStar: Star = {
+        id: Math.random(),
+        x: e.clientX + window.scrollX,
+        y: e.clientY + window.scrollY,
+        size: Math.random() * 5 + 3, // Random size between 3px and 8px
+        opacity: Math.random() * 0.5 + 0.5, // Random opacity between 0.5 and 1
+      };
 
-      // Trigger animation on mouse move
-      if (isInteractive) {
-        setAnimationKey((prevKey) => prevKey + 1); // Change key to restart animation
-      }
+      setStars((prevStars) => [...prevStars, newStar]);
+
+      setTimeout(() => {
+        setStars((prevStars) => prevStars.filter((star) => star.id !== newStar.id));
+      }, 500);
     };
 
-    // Add event listener for mouse movements
+    const handleClick = (e: MouseEvent) => {
+      // Create an explosion effect on click
+      const newExplosion: Explosion = {
+        id: Math.random(),
+        x: e.clientX + window.scrollX,
+        y: e.clientY + window.scrollY,
+      };
+
+      setExplosions((prevExplosions) => [...prevExplosions, newExplosion]);
+
+      setTimeout(() => {
+        setExplosions((prevExplosions) => prevExplosions.filter((exp) => exp.id !== newExplosion.id));
+      }, 800);
+    };
+
     window.addEventListener("mousemove", handleMouseMove);
-
+    window.addEventListener("click", handleClick);
     return () => {
-      // Clean up event listener
       window.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener("click", handleClick);
     };
-  }, []); // No dependencies here to keep the effect stable
+  }, []);
 
   return (
     <div>
-      {/* Custom cursor */}
+      {/* Cursor element */}
       <div
+        className="cursor"
         style={{
-          position: "absolute",
           top: `${position.y}px`,
           left: `${position.x}px`,
-          width: isHovering ? "20px" : "32px", // Scale up on hover
-          height: isHovering ? "20px" : "32px",
-          backgroundColor: "rgba(255, 255, 255, 0.8)", // Cursor color
-          borderRadius: "50%", // Circle shape
-          pointerEvents: "none", // Ensure the cursor can still interact with elements
-          transition: "transform 0.1s ease, width 0.2s, height 0.2s, box-shadow 0.2s", // Smooth transition for size and shadow
-          transform: "translate(-50%, -50%)", // Center the cursor
-          zIndex: 9999, // Ensure it stays on top of other content
+          width: isHovering ? "15px" : "15px",
+          height: isHovering ? "15px" : "15px",
+          backgroundColor: "rgba(255, 255, 255, 0.8)",
+          boxShadow: "0 0 10px rgba(255, 255, 255, 0.7)",
         }}
       />
-      {/* Animated ring */}
-      {isHovering && (
+
+      {/* Spark trail effect */}
+      {stars.map((star) => (
         <div
-          className="ring"
-          key={animationKey} // Use animationKey to trigger a re-mount
+          key={star.id}
+          className="star-trail"
           style={{
-            position: "absolute",
-            top: `${position.y}px`,
-            left: `${position.x}px`,
-            transform: "translate(-50%, -50%)", // Center the ring
-            zIndex: 9998, // Just below the cursor
-            pointerEvents: "none", // Prevent ring from blocking mouse events
+            top: `${star.y}px`,
+            left: `${star.x}px`,
+            width: `${star.size}px`,
+            height: `${star.size}px`,
+            opacity: star.opacity,
           }}
         />
-      )}
+      ))}
+
+      {/* Click explosion effect */}
+      {explosions.map((explosion) => (
+        <div
+          key={explosion.id}
+          className="star-explosion"
+          style={{
+            top: `${explosion.y}px`,
+            left: `${explosion.x}px`,
+          }}
+        />
+      ))}
     </div>
   );
 };

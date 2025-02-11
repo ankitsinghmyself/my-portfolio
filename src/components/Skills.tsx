@@ -81,6 +81,8 @@ const Skills: React.FC = () => {
   const devopsSkills = [
     { label: "Git", color: "green" },
     { label: "Docker", color: "green" },
+    { label: "Kubernetes", color: "green" },
+    { label: "AWS", color: "green" },
   ];
 
   return (
